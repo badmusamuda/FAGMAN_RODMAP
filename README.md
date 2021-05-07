@@ -16,7 +16,7 @@
 
 <br/>
 <a>DSA(DataStructures and Algorithm ) LeeTCode Problem-Solution</a><br/>
-   <b>Each solution for any DSA problemc comes iteratively and recursively(I solve n - 720) problems on Leetcode</b>
+   <b>Each solution for any DSA problemc comes iteratively and recursively(I have solved 3 of 720) problems on Leetcode</b>
    <a>See leetcode_link_reference</a>
 
 <br/>
