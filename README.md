@@ -1,5 +1,5 @@
 <p> 
-  <b>Things you need to master</b>
+  <b>Things you need to master</b><br/>
 <img src="fagman.png" />
 </p><br/>
 
