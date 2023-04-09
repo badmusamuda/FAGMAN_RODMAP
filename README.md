@@ -4,7 +4,7 @@
   <li>Know how to work with a PC to a basic extent</li>
   <li>Download any text editor of your choice</li> 
   <li>Start with OOP</li> 
-  <p>
+  ```
   ------------------------------------------------------------------------
   |Object                                                                 |
   |        Classes                                                        |
@@ -13,7 +13,7 @@
   |                                                 equals, and hashCode  |
   |                                                                       |
   ------------------------------------------------------------------------
-</p>
+```
   <p>
   =============================================
   +                                            +
