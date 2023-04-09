@@ -4,7 +4,7 @@
   <li>Know how to work with a PC to a basic extent</li>
   <li>Download any text editor of your choice</li> 
   <li>Start with OOP</li> 
-  
+  <p>
   ------------------------------------------------------------------------
   |Object                                                                 |
   |        Classes                                                        |
@@ -13,11 +13,14 @@
   |                                                 equals, and hashCode  |
   |                                                                       |
   ------------------------------------------------------------------------
+</p>
+  <p>
   =============================================
   +                                            +
   +PLEASE DON'T IMPLEMENT java.io.Serailzable  +
   +                                            +
   =============================================
+  </p>
   <li>Know what is an Object, and how it should be implemented</li> 
   <li>You should be able to model an object in a blue print</li> 
   <li>Comfortably run your code from the CMD</li> 
@@ -31,7 +34,7 @@
   <li>Test coverage is important, so consider Jacoco</li> 
   <li>You will need external or third party dependency, so setup Maven on your machine</li> 
 
-  
+  <p>
   ------------------------------------------------------------------------
   |Avoid creating unncessary objects                                     |
   |        Learn how to create singleton that's thread safe              |
@@ -40,12 +43,14 @@
   |                                                 equals, and hashCode  |
   |                                                                       |
   ------------------------------------------------------------------------
+  </p>
   <br/><b>Use this order: Step 3</b><br/>
   <li>Concurrency is your friend, master it</li>
   <li>Understand what is unsynchronized, synchronized, and asynchrnous processing</li> 
   <li>Be able to implement asnchronous components with your hand without any IDE</li> 
   <li>See what Runnable, Callable, and CompletableFuture can do for you</li> 
   <li>Deep dive into thread lifecycle</li> 
+  <p>
   ------------------------------------------------------------------------
   |new                                                                   |
   |        runnable(Ruuning or Runnable)                                 |
@@ -54,7 +59,7 @@
   |                                                                      |
   |                                                                      |
   ------------------------------------------------------------------------
-
+ </p>
   <br/><b>Use this order: Step 4</b><br/>
   <li>Play around with servlet, and build a toy project with it</li>
   <li>Know what http headers are, and how they work</li> 
