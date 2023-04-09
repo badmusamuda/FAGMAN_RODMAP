@@ -38,6 +38,7 @@
   <li>Know what http headers are, and how they work</li> 
   <li>Avoid repetitive call, so understand what cookies, and caches are</li> 
   <li>You need a database, go for the simplest(MySQL)</li> 
+<img src="5.png" />
 
   <br/><b>Use this order: Step 5</b><br/>
   <li>With your hand, know how to create a database table</li>
