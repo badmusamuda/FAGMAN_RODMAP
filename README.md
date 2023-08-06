@@ -1,14 +1,13 @@
 <p> 
   <b>Summary</b><br/><p/>
-  <b>Use this order: Step 1</b>
     <img src="Screenshot%20from%202023-08-06%2004-51-49.png" />
     <img src ="Screenshot%20from%202023-08-06%2004-56-14.png" />
-  <li>Know how to work with a PC to a basic extent</li>
+  <li>Step 1: Know how to work with a PC to a basic extent</li>
   <li>Download any text editor of your choice</li> 
   <li>Start with OOP</li> 
-    ![image](https://github.com/badmusamuda/FAGMAN_RODMAP/assets/16603844/606c4a54-5dc2-435d-bbe1-419000c31bfc)
+  
 
- <img src="2.png" />
+ <img src="Screenshot%20from%202023-08-06%2016-45-02.png" />
 
   </p>
   <li>Know what is an Object, and how it should be implemented</li> 
