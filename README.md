@@ -4,6 +4,7 @@
   <li>Know how to work with a PC to a basic extent</li>
   <li>Download any text editor of your choice</li> 
   <li>Start with OOP</li> 
+    ![image](https://github.com/badmusamuda/FAGMAN_RODMAP/assets/16603844/606c4a54-5dc2-435d-bbe1-419000c31bfc)
 
  <img src="2.png" />
 
