@@ -1,6 +1,7 @@
 <p> 
-  <b>Things you need to master</b><br/><p/>
+  <b>Summary</b><br/><p/>
   <b>Use this order: Step 1</b>
+    <img src="Screenshot%20from%202023-08-06%2004-51-49.png" />
   <li>Know how to work with a PC to a basic extent</li>
   <li>Download any text editor of your choice</li> 
   <li>Start with OOP</li> 
