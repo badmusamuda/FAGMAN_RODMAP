@@ -7,7 +7,7 @@
   <li>Start with OOP</li> 
   
 
- <img src="Screenshot%20from%202023-08-06%2016-45-02.png" />
+ <img src="Day#1.png" />
 
   </p>
   <li>Know what is an Object, and how it should be implemented</li> 
