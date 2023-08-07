@@ -5,10 +5,7 @@
   <li>Step 1: Know how to work with a PC to a basic extent</li>
   <li>Download any text editor of your choice</li> 
   <li>Start with OOP</li> 
-  
-
  <img src="Day#1.png" />
-
   </p>
   <li>Know what is an Object, and how it should be implemented</li> 
   <li>You should be able to model an object in a blue print</li> 
