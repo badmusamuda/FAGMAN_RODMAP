@@ -4,9 +4,10 @@
     <img src ="Screenshot%20from%202023-08-06%2004-56-14.png" />
   <li>Step 1: Know how to work with a PC to a basic extent</li>
   <li>Download any text editor of your choice</li> 
-  <li>Start with OOP</li> 
+  <li>Start with the fundamentails</li> 
  <img src="Day1.png" />
   </p>
+  <img src="Screenshot from 2023-08-14 10-45-12.png"/>
   <li>Know what is an Object, and how it should be implemented</li> 
   <li>You should be able to model an object in a blue print</li> 
   <li>Comfortably run your code from the CMD</li> 
