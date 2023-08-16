@@ -7,7 +7,7 @@
   <li>Start with the fundamentails</li> 
  <img src="Day1.png" width="800" height="800"/>
   </p>
-  <img src="Screenshot from 2023-08-14 10-45-12.png"/>
+  <img src="Screenshot from 2023-08-14 10-45-12.png" width="800" height="800"/>
   <li>Know what is an Object, and how it should be implemented</li> 
   <li>You should be able to model an object in a blue print</li> 
   <li>Comfortably run your code from the CMD</li> 
