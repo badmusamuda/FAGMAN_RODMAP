@@ -5,7 +5,7 @@
   <li>Step 1: Know how to work with a PC to a basic extent</li>
   <li>Download any text editor of your choice</li> 
   <li>Start with the fundamentails</li> 
- <img src="Day1.png" width="400" height="400"/>
+ <img src="Day1.png" width="800" height="800"/>
   </p>
   <img src="Screenshot from 2023-08-14 10-45-12.png"/>
   <li>Know what is an Object, and how it should be implemented</li> 
