@@ -144,3 +144,63 @@ public class KafkaComplexProducerDemo {
         }
     }
 }
+
+
+stages:
+  - build
+
+variables:
+  MAVEN_OPTS: "-Dmaven.repo.local=.m2/repository -Xmx4096m"
+  CL_PROJECT_DIR: "."  # Adjust if your project uses a subdirectory
+
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    - .m2/repository/
+    - target/
+
+build:
+  stage: build
+  image: maven:3.9-eclipse-temurin-17
+  script:
+    - microdnf install -y fontconfig
+    - export JAVA_HOME=/usr/local/jdk-21
+
+    # Detect changed modules
+    - |
+      if [[ -n "$CI_COMMIT_BEFORE_SHA" ]]; then
+        BASE_COMMIT="$CI_COMMIT_BEFORE_SHA"
+      else
+        BASE_COMMIT=$(git merge-base origin/${CI_MERGE_REQUEST_TARGET_BRANCH_NAME} HEAD)
+      fi
+
+      CHANGED_MODULES=$(
+        git diff --name-only ${BASE_COMMIT}..HEAD |
+        grep -E 'pom\.xml|src/.*' |
+        sed -n 's#\(.*\)/pom\.xml#\1#p; s#\(.*/src/.*\)#\1#p' |
+        xargs -I{} dirname {} |
+        sort -u |
+        sed 's#/#:#g' |
+        tr '\n' ',' | sed 's/,$//'
+      )
+
+    # Build only changed modules + dependencies
+    - |
+      if [[ -n "$CHANGED_MODULES" ]]; then
+        echo "Building changed modules: ${CHANGED_MODULES}"
+        mvn -B versions:set -DnewVersion="${VERSION}" -DskipTests
+        mvn install -pl "$CHANGED_MODULES" -am -amd -DskipTests -T 1C
+      else
+        echo "No changes detected. Skipping build."
+      fi
+
+    # Copy artifacts only from built modules
+    - mkdir -p artifacts
+    - mkdir -p serviceArtifacts
+    - |
+      for module in back-service ls-event-listener feedback-event-listener feedback-batch feedback-goals-app rules-engine security; do
+        if [[ -d "${module}/target" ]]; then
+          cp ${module}/target/*.jar artifacts/
+        fi
+      done
+    - ls -al artifacts/
