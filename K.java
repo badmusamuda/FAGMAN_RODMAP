@@ -1,3 +1,100 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.nio.charset.StandardCharsets;
+
+public class JsonPostClient {
+
+    /**
+     * Sends a POST request with JSON payload to the specified URL.
+     * 
+     * @param urlString The URL to send the request to
+     * @param jsonPayload The JSON payload as a string
+     * @return The response from the server as a string
+     * @throws IOException If an I/O error occurs
+     */
+    public static String postJson(String urlString, String jsonPayload) throws IOException {
+        // Create URL object
+        URL url = new URL(urlString);
+        
+        // Open connection
+        HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+        
+        try {
+            // Set up the connection
+            conn.setRequestMethod("POST");
+            conn.setRequestProperty("Content-Type", "application/json");
+            conn.setRequestProperty("Accept", "application/json");
+            conn.setDoOutput(true);
+            conn.setConnectTimeout(5000);
+            conn.setReadTimeout(5000);
+            
+            // Write JSON data to the connection
+            try (OutputStream os = conn.getOutputStream()) {
+                byte[] input = jsonPayload.getBytes(StandardCharsets.UTF_8);
+                os.write(input, 0, input.length);
+            }
+            
+            // Check the response code
+            int responseCode = conn.getResponseCode();
+            
+            // Read the response (from either input or error stream)
+            BufferedReader reader;
+            if (responseCode >= 200 && responseCode < 300) {
+                reader = new BufferedReader(new InputStreamReader(
+                        conn.getInputStream(), StandardCharsets.UTF_8));
+            } else {
+                reader = new BufferedReader(new InputStreamReader(
+                        conn.getErrorStream(), StandardCharsets.UTF_8));
+            }
+            
+            // Build the response string
+            StringBuilder response = new StringBuilder();
+            String line;
+            while ((line = reader.readLine()) != null) {
+                response.append(line);
+            }
+            
+            return response.toString();
+        } finally {
+            // Always disconnect
+            conn.disconnect();
+        }
+    }
+    
+    // Example usage
+    public static void main(String[] args) {
+        try {
+            String endpoint = "https://jsonplaceholder.typicode.com/posts";
+            String payload = "{\"title\":\"Test Title\",\"body\":\"Test Body\",\"userId\":1}";
+            
+            String response = postJson(endpoint, payload);
+            System.out.println("Response: " + response);
+            
+        } catch (IOException e) {
+            System.err.println("Error: " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
