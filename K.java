@@ -1,3 +1,377 @@
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.ConnectException;
+import java.net.HttpURLConnection;
+import java.net.SocketTimeoutException;
+import java.net.URL;
+import java.nio.charset.StandardCharsets;
+import java.time.Duration;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
+import java.util.zip.GZIPInputStream;
+
+/**
+ * A robust and scalable HTTP client for making REST API calls
+ */
+public class HttpClient {
+    
+    // Configurable properties
+    private final int connectTimeout;
+    private final int readTimeout;
+    private final int maxRetries;
+    private final long retryDelayMs;
+    private final ExecutorService executorService;
+    private final boolean enableCompression;
+    
+    // Default headers
+    private final Map<String, String> defaultHeaders;
+    
+    /**
+     * Builder for creating HttpClient instances
+     */
+    public static class Builder {
+        private int connectTimeout = 10000; // 10 seconds
+        private int readTimeout = 30000; // 30 seconds
+        private int maxRetries = 3;
+        private long retryDelayMs = 1000; // 1 second
+        private int threadPoolSize = 10;
+        private boolean enableCompression = true;
+        private Map<String, String> defaultHeaders = new HashMap<>();
+        
+        public Builder() {
+            // Add default headers
+            defaultHeaders.put("Content-Type", "application/json");
+            defaultHeaders.put("Accept", "application/json");
+        }
+        
+        public Builder connectTimeout(Duration timeout) {
+            this.connectTimeout = (int) timeout.toMillis();
+            return this;
+        }
+        
+        public Builder readTimeout(Duration timeout) {
+            this.readTimeout = (int) timeout.toMillis();
+            return this;
+        }
+        
+        public Builder maxRetries(int maxRetries) {
+            this.maxRetries = maxRetries;
+            return this;
+        }
+        
+        public Builder retryDelay(Duration delay) {
+            this.retryDelayMs = delay.toMillis();
+            return this;
+        }
+        
+        public Builder threadPoolSize(int size) {
+            this.threadPoolSize = size;
+            return this;
+        }
+        
+        public Builder enableCompression(boolean enable) {
+            this.enableCompression = enable;
+            return this;
+        }
+        
+        public Builder withDefaultHeader(String key, String value) {
+            this.defaultHeaders.put(key, value);
+            return this;
+        }
+        
+        public HttpClient build() {
+            return new HttpClient(this);
+        }
+    }
+    
+    /**
+     * Response object containing HTTP response details
+     */
+    public static class HttpResponse {
+        private final int statusCode;
+        private final String body;
+        private final Map<String, String> headers;
+        
+        public HttpResponse(int statusCode, String body, Map<String, String> headers) {
+            this.statusCode = statusCode;
+            this.body = body;
+            this.headers = headers;
+        }
+        
+        public int getStatusCode() {
+            return statusCode;
+        }
+        
+        public String getBody() {
+            return body;
+        }
+        
+        public Map<String, String> getHeaders() {
+            return headers;
+        }
+        
+        public boolean isSuccess() {
+            return statusCode >= 200 && statusCode < 300;
+        }
+        
+        @Override
+        public String toString() {
+            return "HttpResponse{" +
+                    "statusCode=" + statusCode +
+                    ", body='" + body + '\'' +
+                    ", headers=" + headers +
+                    '}';
+        }
+    }
+    
+    /**
+     * Private constructor - use Builder to create instances
+     */
+    private HttpClient(Builder builder) {
+        this.connectTimeout = builder.connectTimeout;
+        this.readTimeout = builder.readTimeout;
+        this.maxRetries = builder.maxRetries;
+        this.retryDelayMs = builder.retryDelayMs;
+        this.executorService = Executors.newFixedThreadPool(builder.threadPoolSize);
+        this.enableCompression = builder.enableCompression;
+        this.defaultHeaders = builder.defaultHeaders;
+    }
+    
+    /**
+     * Send a POST request with JSON payload synchronously
+     * 
+     * @param url The endpoint URL
+     * @param jsonPayload The JSON payload as string
+     * @return HttpResponse object containing the response
+     * @throws IOException If an I/O error occurs
+     */
+    public HttpResponse post(String url, String jsonPayload) throws IOException {
+        return post(url, jsonPayload, null);
+    }
+    
+    /**
+     * Send a POST request with JSON payload and custom headers synchronously
+     * 
+     * @param url The endpoint URL
+     * @param jsonPayload The JSON payload as string
+     * @param headers Additional headers (will override default headers)
+     * @return HttpResponse object containing the response
+     * @throws IOException If an I/O error occurs
+     */
+    public HttpResponse post(String url, String jsonPayload, Map<String, String> headers) throws IOException {
+        Map<String, String> mergedHeaders = new HashMap<>(defaultHeaders);
+        if (headers != null) {
+            mergedHeaders.putAll(headers);
+        }
+        
+        if (enableCompression) {
+            mergedHeaders.put("Accept-Encoding", "gzip");
+        }
+        
+        IOException lastException = null;
+        
+        // Retry logic
+        for (int attempt = 0; attempt <= maxRetries; attempt++) {
+            try {
+                if (attempt > 0) {
+                    // Exponential backoff with jitter
+                    long delay = retryDelayMs * (long) Math.pow(2, attempt - 1);
+                    delay += (long) (delay * 0.2 * Math.random()); // Add 0-20% jitter
+                    Thread.sleep(delay);
+                }
+                
+                return executeRequest("POST", url, jsonPayload, mergedHeaders);
+                
+            } catch (IOException e) {
+                lastException = e;
+                
+                // Only retry on connection issues, not HTTP errors
+                if (!(e instanceof ConnectException || e instanceof SocketTimeoutException)) {
+                    throw e;
+                }
+                
+                System.err.println("Request failed (attempt " + (attempt + 1) + "/" + (maxRetries + 1) + 
+                        "): " + e.getMessage());
+                
+                if (attempt == maxRetries) {
+                    System.err.println("Max retries reached. Giving up.");
+                    throw e;
+                }
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+                throw new IOException("Request interrupted", e);
+            }
+        }
+        
+        // Should never reach here due to the throw in the loop
+        throw lastException;
+    }
+    
+    /**
+     * Send a POST request asynchronously
+     * 
+     * @param url The endpoint URL
+     * @param jsonPayload The JSON payload as string
+     * @return CompletableFuture that will complete with the HttpResponse
+     */
+    public CompletableFuture<HttpResponse> postAsync(String url, String jsonPayload) {
+        return postAsync(url, jsonPayload, null);
+    }
+    
+    /**
+     * Send a POST request with custom headers asynchronously
+     * 
+     * @param url The endpoint URL
+     * @param jsonPayload The JSON payload as string
+     * @param headers Additional headers (will override default headers)
+     * @return CompletableFuture that will complete with the HttpResponse
+     */
+    public CompletableFuture<HttpResponse> postAsync(String url, String jsonPayload, Map<String, String> headers) {
+        return CompletableFuture.supplyAsync(() -> {
+            try {
+                return post(url, jsonPayload, headers);
+            } catch (IOException e) {
+                throw new RuntimeException("Failed to execute request: " + e.getMessage(), e);
+            }
+        }, executorService);
+    }
+    
+    /**
+     * Execute the actual HTTP request
+     */
+    private HttpResponse executeRequest(String method, String urlString, String payload, 
+                                       Map<String, String> headers) throws IOException {
+        URL url = new URL(urlString);
+        HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+        
+        try {
+            connection.setRequestMethod(method);
+            connection.setConnectTimeout(connectTimeout);
+            connection.setReadTimeout(readTimeout);
+            
+            // Set headers
+            for (Map.Entry<String, String> header : headers.entrySet()) {
+                connection.setRequestProperty(header.getKey(), header.getValue());
+            }
+            
+            // Send payload if provided
+            if (payload != null && !payload.isEmpty()) {
+                connection.setDoOutput(true);
+                try (OutputStream os = connection.getOutputStream()) {
+                    byte[] input = payload.getBytes(StandardCharsets.UTF_8);
+                    os.write(input, 0, input.length);
+                }
+            }
+            
+            // Get response code
+            int responseCode = connection.getResponseCode();
+            
+            // Read the response
+            Map<String, String> responseHeaders = new HashMap<>();
+            for (String key : connection.getHeaderFields().keySet()) {
+                if (key != null) {  // HttpURLConnection returns a key=null for the status line
+                    responseHeaders.put(key, connection.getHeaderField(key));
+                }
+            }
+            
+            // Get input stream (error stream if response code is >= 400)
+            InputStream inputStream;
+            if (responseCode >= 400) {
+                inputStream = connection.getErrorStream();
+            } else {
+                inputStream = connection.getInputStream();
+            }
+            
+            // Handle GZIP compression if enabled
+            String contentEncoding = connection.getHeaderField("Content-Encoding");
+            if (contentEncoding != null && contentEncoding.equalsIgnoreCase("gzip")) {
+                inputStream = new GZIPInputStream(inputStream);
+            }
+            
+            // Read response body
+            StringBuilder response = new StringBuilder();
+            if (inputStream != null) {
+                try (java.io.BufferedReader reader = new java.io.BufferedReader(
+                        new java.io.InputStreamReader(inputStream, StandardCharsets.UTF_8))) {
+                    String line;
+                    while ((line = reader.readLine()) != null) {
+                        response.append(line);
+                    }
+                }
+            }
+            
+            return new HttpResponse(responseCode, response.toString(), responseHeaders);
+            
+        } finally {
+            connection.disconnect();
+        }
+    }
+    
+    /**
+     * Shutdown the client and its resources
+     */
+    public void shutdown() {
+        executorService.shutdown();
+        try {
+            if (!executorService.awaitTermination(5, TimeUnit.SECONDS)) {
+                executorService.shutdownNow();
+            }
+        } catch (InterruptedException e) {
+            executorService.shutdownNow();
+            Thread.currentThread().interrupt();
+        }
+    }
+    
+    /**
+     * Example usage
+     */
+    public static void main(String[] args) {
+        // Create a client with custom settings
+        HttpClient client = new HttpClient.Builder()
+                .connectTimeout(Duration.ofSeconds(5))
+                .readTimeout(Duration.ofSeconds(10))
+                .maxRetries(2)
+                .retryDelay(Duration.ofMillis(500))
+                .threadPoolSize(4)
+                .withDefaultHeader("X-API-Key", "your-api-key")
+                .build();
+        
+        try {
+            // Synchronous request
+            String jsonPayload = "{\"name\":\"John Doe\",\"email\":\"john@example.com\"}";
+            HttpResponse response = client.post("https://api.example.com/users", jsonPayload);
+            
+            System.out.println("Response code: " + response.getStatusCode());
+            System.out.println("Response body: " + response.getBody());
+            
+            // Asynchronous request
+            client.postAsync("https://api.example.com/async", jsonPayload)
+                .thenAccept(asyncResponse -> {
+                    System.out.println("Async response received: " + asyncResponse.getStatusCode());
+                })
+                .exceptionally(e -> {
+                    System.err.println("Async request failed: " + e.getMessage());
+                    return null;
+                });
+            
+            // Allow time for async request to complete
+            Thread.sleep(2000);
+            
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            // Shutdown the client when done
+            client.shutdown();
+        }
+    }
+}
+
+
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.Producer;
 import org.apache.kafka.clients.producer.ProducerConfig;
