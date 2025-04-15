@@ -1,3 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Statistics Dashboard</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --secondary: #64748b;
+            --danger: #dc2626;
+            --success: #16a34a;
+            --warning: #ca8a04;
+            --bg-light: #f8fafc;
+            --shadow: rgba(0, 0, 0, 0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        
+        body {
+            background-color: #f1f5f9;
+            color: #334155;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .dashboard {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px var(--shadow);
+            overflow: hidden;
+        }
+        
+        .dashboard-header {
+            background-color: var(--primary);
+            color: white;
+            padding: 1.5rem 2rem;
+        }
+        
+        .dashboard-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .dashboard-subtitle {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        .stats-container {
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .stat-card {
+            background-color: var(--bg-light);
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 4px var(--shadow);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px var(--shadow);
+        }
+        
+        .stat-header {
+            margin-bottom: 1rem;
+        }
+        
+        .stat-title {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .stat-indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 10px;
+            display: inline-block;
+        }
+        
+        .stat-indicator.total {
+            background-color: var(--primary);
+        }
+        
+        .stat-indicator.deleted {
+            background-color: var(--danger);
+        }
+        
+        .stat-indicator.updated {
+            background-color: var(--warning);
+        }
+        
+        .stat-value {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-description {
+            font-size: 0.875rem;
+            color: var(--secondary);
+        }
+        
+        .progress-bar {
+            height: 8px;
+            background-color: #e2e8f0;
+            border-radius: 4px;
+            margin-top: 1rem;
+            overflow: hidden;
+        }
+        
+        .progress {
+            height: 100%;
+            border-radius: 4px;
+        }
+        
+        .progress.total {
+            background-color: var(--primary);
+            width: 100%;
+        }
+        
+        .progress.deleted {
+            background-color: var(--danger);
+            width: 50%;
+        }
+        
+        .progress.updated {
+            background-color: var(--warning);
+            width: 20.4%;
+        }
+        
+        .dashboard-footer {
+            padding: 1.5rem 2rem;
+            border-top: 1px solid #e2e8f0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.875rem;
+            color: var(--secondary);
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            .stats-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="dashboard">
+            <div class="dashboard-header">
+                <h1 class="dashboard-title">Data Statistics Dashboard</h1>
+                <p class="dashboard-subtitle">Overview of your database records</p>
+            </div>
+            
+            <div class="stats-container">
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <h2 class="stat-title"><span class="stat-indicator total"></span>Total Records</h2>
+                    </div>
+                    <div class="stat-value">500</div>
+                    <p class="stat-description">Total number of records in database</p>
+                    <div class="progress-bar">
+                        <div class="progress total"></div>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <h2 class="stat-title"><span class="stat-indicator deleted"></span>Deleted Records</h2>
+                    </div>
+                    <div class="stat-value">250</div>
+                    <p class="stat-description">50% of total records deleted</p>
+                    <div class="progress-bar">
+                        <div class="progress deleted"></div>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <h2 class="stat-title"><span class="stat-indicator updated"></span>Updated Records</h2>
+                    </div>
+                    <div class="stat-value">102</div>
+                    <p class="stat-description">20.4% of total records updated</p>
+                    <div class="progress-bar">
+                        <div class="progress updated"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="dashboard-footer">
+                <div>Last updated: April 15, 2025</div>
+                <div>Data Management System v1.0</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
