@@ -1,3 +1,197 @@
+import java.util.*;
+
+public class TriangulCalc {
+    
+    private Map<String, List<String>> employeeManagers;
+    private Map<String, Long> memoizedResults;
+    
+    public TriangulCalc() {
+        this.employeeManagers = new HashMap<>();
+        this.memoizedResults = new HashMap<>();
+    }
+    
+    /**
+     * Add an employee with their direct managers
+     */
+    public void addEmployee(String employee, List<String> managers) {
+        employeeManagers.put(employee, new ArrayList<>(managers));
+    }
+    
+    /**
+     * Calculate triangul-value for a specific employee
+     */
+    public long calculateTriangulValue(String employee) {
+        // Return memoized result if already calculated
+        if (memoizedResults.containsKey(employee)) {
+            return memoizedResults.get(employee);
+        }
+        
+        // Get direct managers
+        List<String> directManagers = employeeManagers.getOrDefault(employee, new ArrayList<>());
+        
+        // Base case: no managers
+        if (directManagers.isEmpty()) {
+            memoizedResults.put(employee, 0L);
+            return 0L;
+        }
+        
+        // Calculate: direct managers count + sum of all managers' triangul-values
+        long triangulValue = directManagers.size(); // Count direct managers
+        
+        // Add triangul-value of each direct manager recursively
+        for (String manager : directManagers) {
+            triangulValue += calculateTriangulValue(manager);
+        }
+        
+        // Memoize and return result
+        memoizedResults.put(employee, triangulValue);
+        return triangulValue;
+    }
+    
+    /**
+     * Calculate triangul-values for all employees
+     */
+    public Map<String, Long> calculateAllTriangulValues() {
+        Map<String, Long> results = new HashMap<>();
+        
+        for (String employee : employeeManagers.keySet()) {
+            results.put(employee, calculateTriangulValue(employee));
+        }
+        
+        return results;
+    }
+    
+    /**
+     * Optimized version using topological sorting for better performance with large datasets
+     */
+    public Map<String, Long> calculateAllTriangulValuesOptimized() {
+        Map<String, Long> results = new HashMap<>();
+        Map<String, Integer> inDegree = new HashMap<>();
+        
+        // Initialize all employees
+        for (String employee : employeeManagers.keySet()) {
+            inDegree.put(employee, 0);
+        }
+        
+        // Calculate in-degrees (how many people manage this person)
+        for (String employee : employeeManagers.keySet()) {
+            for (String manager : employeeManagers.get(employee)) {
+                inDegree.put(manager, inDegree.getOrDefault(manager, 0) + 1);
+            }
+        }
+        
+        // Find employees with no subordinates (leaf nodes in management hierarchy)
+        Queue<String> queue = new LinkedList<>();
+        for (Map.Entry<String, Integer> entry : inDegree.entrySet()) {
+            if (entry.getValue() == 0) {
+                queue.offer(entry.getKey());
+            }
+        }
+        
+        // Process employees in topological order
+        while (!queue.isEmpty()) {
+            String employee = queue.poll();
+            
+            // Calculate triangul-value for current employee
+            List<String> directManagers = employeeManagers.getOrDefault(employee, new ArrayList<>());
+            long triangulValue = directManagers.size();
+            
+            for (String manager : directManagers) {
+                triangulValue += results.getOrDefault(manager, 0L);
+            }
+            
+            results.put(employee, triangulValue);
+            
+            // Update in-degrees for employees who have this person as manager
+            for (String otherEmployee : employeeManagers.keySet()) {
+                if (employeeManagers.get(otherEmployee).contains(employee)) {
+                    inDegree.put(otherEmployee, inDegree.get(otherEmployee) - 1);
+                    if (inDegree.get(otherEmployee) == 0) {
+                        queue.offer(otherEmployee);
+                    }
+                }
+            }
+        }
+        
+        return results;
+    }
+    
+    public static void main(String[] args) {
+        TriangulCalc calc = new TriangulCalc();
+        
+        // Sample test data from the problem
+        calc.addEmployee("james", Arrays.asList("paul", "ade", "bola", "olu"));
+        calc.addEmployee("bola", Arrays.asList("ade", "olu", "donald"));
+        calc.addEmployee("paul", Arrays.asList("bola", "olu", "jones"));
+        calc.addEmployee("ade", Arrays.asList("ola", "femi", "bola", "olu"));
+        calc.addEmployee("donald", Arrays.asList("paul", "ade", "bola", "olu"));
+        
+        // Employees with no managers (leaf nodes)
+        calc.addEmployee("olu", new ArrayList<>());
+        calc.addEmployee("jones", new ArrayList<>());
+        calc.addEmployee("ola", new ArrayList<>());
+        calc.addEmployee("femi", new ArrayList<>());
+        
+        System.out.println("=== Triangul-Calc Results ===");
+        
+        // Calculate using memoized recursive approach
+        System.out.println("\n--- Using Recursive Memoization ---");
+        Map<String, Long> results = calc.calculateAllTriangulValues();
+        
+        for (Map.Entry<String, Long> entry : results.entrySet()) {
+            System.out.println(entry.getKey() + " = " + entry.getValue());
+        }
+        
+        // Reset for optimized calculation
+        calc.memoizedResults.clear();
+        
+        System.out.println("\n--- Using Optimized Topological Sort ---");
+        Map<String, Long> optimizedResults = calc.calculateAllTriangulValuesOptimized();
+        
+        for (Map.Entry<String, Long> entry : optimizedResults.entrySet()) {
+            System.out.println(entry.getKey() + " = " + entry.getValue());
+        }
+        
+        // Detailed calculation for James (for verification)
+        System.out.println("\n--- Detailed Calculation for James ---");
+        System.out.println("James has direct managers: [paul, ade, bola, olu] = 4");
+        System.out.println("Paul's triangul-value: " + results.get("paul"));
+        System.out.println("Ade's triangul-value: " + results.get("ade"));
+        System.out.println("Bola's triangul-value: " + results.get("bola"));
+        System.out.println("Olu's triangul-value: " + results.get("olu"));
+        System.out.println("James total: 4 + " + results.get("paul") + " + " + results.get("ade") + 
+                          " + " + results.get("bola") + " + " + results.get("olu") + " = " + results.get("james"));
+        
+        // Performance test simulation
+        System.out.println("\n--- Performance Simulation ---");
+        long startTime = System.currentTimeMillis();
+        
+        // Simulate larger dataset
+        TriangulCalc largeSim = new TriangulCalc();
+        for (int i = 0; i < 10000; i++) {
+            List<String> managers = new ArrayList<>();
+            // Each employee has 2-5 random managers
+            int numManagers = 2 + (i % 4);
+            for (int j = 0; j < numManagers; j++) {
+                managers.add("manager_" + ((i + j) % 1000));
+            }
+            largeSim.addEmployee("employee_" + i, managers);
+        }
+        
+        // Add some leaf nodes
+        for (int i = 0; i < 1000; i++) {
+            largeSim.addEmployee("manager_" + i, new ArrayList<>());
+        }
+        
+        Map<String, Long> largeResults = largeSim.calculateAllTriangulValues();
+        long endTime = System.currentTimeMillis();
+        
+        System.out.println("Processed 11,000 employees in " + (endTime - startTime) + " ms");
+        System.out.println("Sample result - employee_0: " + largeResults.get("employee_0"));
+        System.out.println("Sample result - employee_100: " + largeResults.get("employee_100"));
+    }
+}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
