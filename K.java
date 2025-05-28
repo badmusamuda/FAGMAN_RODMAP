@@ -10,6 +10,118 @@ public class TriangulCalc {
     }
 
     public int calculateTrigance(String employee) {
+        // Check cache first
+        if (triganceCache.containsKey(employee)) {
+            return triganceCache.get(employee);
+        }
+
+        Stack<String> stack = new Stack<>();
+        stack.push(employee);
+        Map<String, Integer> tempCounts = new HashMap<>();
+        tempCounts.put(employee, 0);
+
+        while (!stack.isEmpty()) {
+            String current = stack.peek();
+            List<String> managers = employeeManagers.getOrDefault(current, Collections.emptyList());
+
+            // Check if all managers are processed
+            boolean allProcessed = true;
+            int managerSum = 0;
+            
+            for (String manager : managers) {
+                if (!triganceCache.containsKey(manager) && !tempCounts.containsKey(manager)) {
+                    stack.push(manager);
+                    tempCounts.put(manager, 0);
+                    allProcessed = false;
+                    break;
+                }
+            }
+
+            if (allProcessed) {
+                stack.pop(); // Done with this employee
+                int total = managers.size();
+                for (String manager : managers) {
+                    total += triganceCache.containsKey(manager) ? 
+                            triganceCache.get(manager) : tempCounts.get(manager);
+                }
+                tempCounts.put(current, total);
+                
+                // Move to cache once fully calculated
+                if (current.equals(employee)) {
+                    triganceCache.put(current, total);
+                }
+            }
+        }
+
+        return triganceCache.get(employee);
+    }
+
+    public Map<String, Integer> calculateAllTrigances() {
+        Map<String, Integer> result = new HashMap<>();
+        for (String employee : employeeManagers.keySet()) {
+            result.put(employee, calculateTrigance(employee));
+        }
+        return result;
+    }
+
+    public static void main(String[] args) {
+        // Test with a deep hierarchy
+        Map<String, List<String>> input = new HashMap<>();
+        input.put("A", Arrays.asList("B", "C"));
+        input.put("B", Arrays.asList("D", "E"));
+        input.put("C", Arrays.asList("F"));
+        input.put("D", Arrays.asList("G"));
+        input.put("E", Collections.emptyList());
+        input.put("F", Arrays.asList("E", "G"));
+        input.put("G", Collections.emptyList());
+
+        TriangulCalc calculator = new TriangulCalc(input);
+        Map<String, Integer> triganceValues = calculator.calculateAllTrigances();
+
+        System.out.println("Employee Trigance Values:");
+        for (Map.Entry<String, Integer> entry : triganceValues.entrySet()) {
+            System.out.println(entry.getKey() + " = " + entry.getValue());
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import java.util.*;
+
+public class TriangulCalc {
+    private Map<String, List<String>> employeeManagers;
+    private Map<String, Integer> triganceCache;
+
+    public TriangulCalc(Map<String, List<String>> employeeManagers) {
+        this.employeeManagers = employeeManagers;
+        this.triganceCache = new HashMap<>();
+    }
+
+    public int calculateTrigance(String employee) {
         // Check if we've already calculated this employee's trigance
         if (triganceCache.containsKey(employee)) {
             return triganceCache.get(employee);
