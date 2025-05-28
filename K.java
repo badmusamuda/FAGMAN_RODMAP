@@ -1,6 +1,84 @@
 import java.util.*;
 
 public class TriangulCalc {
+    private Map<String, List<String>> employeeManagers;
+    private Map<String, Integer> triganceCache;
+
+    public TriangulCalc(Map<String, List<String>> employeeManagers) {
+        this.employeeManagers = employeeManagers;
+        this.triganceCache = new HashMap<>();
+    }
+
+    public int calculateTrigance(String employee) {
+        // Check if we've already calculated this employee's trigance
+        if (triganceCache.containsKey(employee)) {
+            return triganceCache.get(employee);
+        }
+
+        // Get the employee's direct managers (empty list if none)
+        List<String> managers = employeeManagers.getOrDefault(employee, Collections.emptyList());
+        int total = managers.size(); // Start with direct managers count
+
+        // Recursively add trigance of each manager
+        for (String manager : managers) {
+            total += calculateTrigance(manager);
+        }
+
+        // Cache the result before returning
+        triganceCache.put(employee, total);
+        return total;
+    }
+
+    public Map<String, Integer> calculateAllTrigances() {
+        Map<String, Integer> result = new HashMap<>();
+        for (String employee : employeeManagers.keySet()) {
+            result.put(employee, calculateTrigance(employee));
+        }
+        return result;
+    }
+
+    public static void main(String[] args) {
+        // Sample input from the problem statement
+        Map<String, List<String>> input = new HashMap<>();
+        input.put("James", Arrays.asList("paul", "ade", "bola", "olu"));
+        input.put("bola", Arrays.asList("ade", "olu", "donald"));
+        input.put("paul", Arrays.asList("bola", "olu", "jones"));
+        input.put("ade", Arrays.asList("ola", "femi", "bola", "olu"));
+        input.put("donald", Arrays.asList("paul", "ade", "bola", "olu"));
+        // Adding base cases (employees with no managers)
+        input.put("ola", Collections.emptyList());
+        input.put("femi", Collections.emptyList());
+        input.put("olu", Collections.emptyList());
+        input.put("jones", Collections.emptyList());
+
+        TriangulCalc calculator = new TriangulCalc(input);
+        Map<String, Integer> triganceValues = calculator.calculateAllTrigances();
+
+        // Print results
+        System.out.println("Employee Trigance Values:");
+        for (Map.Entry<String, Integer> entry : triganceValues.entrySet()) {
+            System.out.println(entry.getKey() + " = " + entry.getValue());
+        }
+
+        /* Expected Output (based on the recursive calculation):
+           James = 21
+           bola = 12
+           paul = 10
+           ade = 8
+           donald = 21
+           ola = 0
+           femi = 0
+           olu = 0
+           jones = 0
+        */
+    }
+}
+
+
+
+import java.util.*;
+
+public class TriangulCalc {
     
     private Map<String, List<String>> employeeManagers;
     private Map<String, Long> memoizedResults;
