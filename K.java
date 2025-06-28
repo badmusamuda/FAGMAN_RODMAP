@@ -1,5 +1,124 @@
 import java.util.*;
 
+public class EmployeeReportAnalyzer {
+    public static class Result {
+        public final int directReports;
+        public final int totalReports;
+        
+        public Result(int direct, int total) {
+            this.directReports = direct;
+            this.totalReports = total;
+        }
+        
+        @Override
+        public String toString() {
+            return "{direct=" + directReports + ", total=" + totalReports + "}";
+        }
+    }
+
+    private final Map<String, List<String>> orgStructure;
+    private final Map<String, Result> resultCache;
+
+    public EmployeeReportAnalyzer(Map<String, List<String>> orgStructure) {
+        this.orgStructure = orgStructure;
+        this.resultCache = new HashMap<>();
+    }
+
+    public Map<String, Result> analyzeReports(String rootEmployee) {
+        if (!orgStructure.containsKey(rootEmployee)) {
+            return Map.of(rootEmployee, new Result(0, 0));
+        }
+        
+        // Process the entire connected component
+        processEmployee(rootEmployee);
+        
+        // Collect all related employees (those in the cache)
+        Map<String, Result> results = new HashMap<>();
+        for (String employee : resultCache.keySet()) {
+            results.put(employee, resultCache.get(employee));
+        }
+        
+        return results;
+    }
+
+    private Result processEmployee(String employee) {
+        if (resultCache.containsKey(employee)) {
+            return resultCache.get(employee);
+        }
+
+        List<String> directReports = orgStructure.getOrDefault(employee, Collections.emptyList());
+        int totalReports = directReports.size();
+        Set<String> allReports = new HashSet<>(directReports);
+
+        for (String report : directReports) {
+            Result subResult = processEmployee(report);
+            allReports.addAll(getAllReports(report));
+            totalReports = allReports.size();
+        }
+
+        Result result = new Result(directReports.size(), totalReports);
+        resultCache.put(employee, result);
+        return result;
+    }
+
+    private Set<String> getAllReports(String employee) {
+        Set<String> reports = new HashSet<>();
+        Queue<String> queue = new LinkedList<>();
+        queue.add(employee);
+
+        while (!queue.isEmpty()) {
+            String current = queue.poll();
+            List<String> direct = orgStructure.getOrDefault(current, Collections.emptyList());
+            for (String report : direct) {
+                if (reports.add(report)) {
+                    queue.add(report);
+                }
+            }
+        }
+        return reports;
+    }
+
+    public static void main(String[] args) {
+        Map<String, List<String>> org = new HashMap<>();
+        org.put("James", Arrays.asList("paul", "jon", "doe", "peter", "david"));
+        org.put("peter", Arrays.asList("jon", "doe", "name1", "name2"));
+        org.put("david", Arrays.asList("name3", "name4"));
+        org.put("name1", Collections.emptyList());
+        org.put("name2", Collections.emptyList());
+        org.put("name3", Collections.emptyList());
+        org.put("name4", Collections.emptyList());
+
+        EmployeeReportAnalyzer analyzer = new EmployeeReportAnalyzer(org);
+        Map<String, Result> results = analyzer.analyzeReports("James");
+        
+        System.out.println("Report Analysis:");
+        results.forEach((k, v) -> System.out.println(k + ": " + v));
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import java.util.*;
+
 public class EmployeeReportCounter {
     private Map<String, List<String>> employeeReports;
     private Map<String, Integer> countCache;
