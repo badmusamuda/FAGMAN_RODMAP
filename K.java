@@ -1,5 +1,101 @@
 import java.util.*;
 
+public class EmployeeReportCounter {
+    private Map<String, List<String>> employeeReports;
+    private Map<String, Integer> countCache;
+
+    public EmployeeReportCounter(Map<String, List<String>> employeeReports) {
+        this.employeeReports = employeeReports;
+        this.countCache = new HashMap<>();
+    }
+
+    public Map<String, Integer> calculateAllReportCounts() {
+        for (String employee : employeeReports.keySet()) {
+            if (!countCache.containsKey(employee)) {
+                calculateReportCount(employee);
+            }
+        }
+        return new HashMap<>(countCache);
+    }
+
+    private void calculateReportCount(String rootEmployee) {
+        Set<String> uniqueReports = new HashSet<>();
+        Queue<String> queue = new LinkedList<>();
+        
+        queue.add(rootEmployee);
+        uniqueReports.add(rootEmployee); // Prevent self-counting
+
+        while (!queue.isEmpty()) {
+            String current = queue.poll();
+            List<String> reports = employeeReports.getOrDefault(current, Collections.emptyList());
+
+            for (String report : reports) {
+                if (countCache.containsKey(report)) {
+                    // Merge cached counts without expanding
+                    uniqueReports.add(report);
+                    uniqueReports.addAll(getAllCachedReports(report));
+                } else if (uniqueReports.add(report)) {
+                    queue.add(report);
+                }
+            }
+        }
+        
+        // Store only the count (-1 to exclude self)
+        countCache.put(rootEmployee, uniqueReports.size() - 1);
+    }
+
+    private Set<String> getAllCachedReports(String employee) {
+        Set<String> reports = new HashSet<>();
+        Queue<String> queue = new LinkedList<>();
+        queue.add(employee);
+
+        while (!queue.isEmpty()) {
+            String current = queue.poll();
+            List<String> directReports = employeeReports.getOrDefault(current, Collections.emptyList());
+
+            for (String report : directReports) {
+                if (reports.add(report)) {
+                    queue.add(report);
+                }
+            }
+        }
+        return reports;
+    }
+
+    public static void main(String[] args) {
+        Map<String, List<String>> input = new HashMap<>();
+        input.put("James", Arrays.asList("paul", "jon", "doe", "peter", "david", "name9", "name10", "name12", "name14"));
+        input.put("peter", Arrays.asList("jon", "doe", "david", "name1", "name2", "name3", "name4"));
+        input.put("david", Arrays.asList("jon", "doe", "peter", "name1", "name2", "name3", "name4", "name5"));
+
+        EmployeeReportCounter counter = new EmployeeReportCounter(input);
+        Map<String, Integer> results = counter.calculateAllReportCounts();
+
+        System.out.println("Report Counts:");
+        results.forEach((k, v) -> System.out.println(k + " = " + v));
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import java.util.*;
+
 public class TriangulCalc {
     private Map<String, List<String>> employeeManagers;
     private Map<String, Integer> triganceCache;
