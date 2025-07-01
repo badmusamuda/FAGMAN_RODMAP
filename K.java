@@ -1,3 +1,8 @@
+https://web.stanford.edu/class/datasci112/lectures/lecture6.pdf
+
+https://archive.uea.ac.uk/jtm/contents.htm
+
+
 import java.util.*;
 
 public class EmployeeReportAnalyzer {
