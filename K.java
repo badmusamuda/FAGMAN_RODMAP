@@ -4,6 +4,59 @@ https://archive.uea.ac.uk/jtm/contents.htm
 
 
 
+import org.springframework.scheduling.annotation.Async;
+import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.data.mongodb.core.query.Criteria;
+import org.springframework.data.mongodb.core.query.Query;
+import org.springframework.data.mongodb.core.query.Update;
+import org.springframework.stereotype.Service;
+import java.util.List;
+import java.util.concurrent.CompletableFuture;
+
+@Service
+public class UserLogService {
+
+    private final MongoTemplate mongoTemplate;
+    
+    // Collection name constant
+    private static final String USER_LOGS_COLLECTION = "user_logs";
+
+    public UserLogService(MongoTemplate mongoTemplate) {
+        this.mongoTemplate = mongoTemplate;
+    }
+
+    @Async
+    public CompletableFuture<Void> writeUserLogsAsync(List<User> users) {
+        users.forEach(user -> {
+            UserLog newLog = user.getUserLog();
+            processUserLog(newLog);
+        });
+        return CompletableFuture.completedFuture(null);
+    }
+
+    private void processUserLog(UserLog newLog) {
+        // Check if a document exists with the same email but different location
+        Query query = new Query(
+            Criteria.where("email").is(newLog.getEmail())
+                   .and("location").ne(newLog.getLocation())
+        );
+        
+        // Execute update if condition met, otherwise insert
+        Update update = new Update()
+            .set("email", newLog.getEmail())
+            .set("location", newLog.getLocation())
+            .set("timestamp", System.currentTimeMillis());
+            
+        mongoTemplate.upsert(
+            query,
+            update,
+            USER_LOGS_COLLECTION  // Specify collection name directly
+        );
+    }
+}
+
+
+
 import java.util.*;
 
 public class TriangulCalc {
