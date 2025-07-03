@@ -2,7 +2,71 @@ https://web.stanford.edu/class/datasci112/lectures/lecture6.pdf
 
 https://archive.uea.ac.uk/jtm/contents.htm
 
+import org.springframework.scheduling.annotation.Async;
+import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.data.mongodb.core.query.Criteria;
+import org.springframework.data.mongodb.core.query.Query;
+import org.springframework.data.mongodb.core.query.Update;
+import org.springframework.stereotype.Service;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.List;
+import java.util.concurrent.CompletableFuture;
 
+@Service
+public class UserLogService {
+
+    private final MongoTemplate mongoTemplate;
+    private static final String COLLECTION_NAME = "user_logs";
+    private static final DateTimeFormatter DATE_FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+
+    public UserLogService(MongoTemplate mongoTemplate) {
+        this.mongoTemplate = mongoTemplate;
+    }
+
+    @Async
+    public CompletableFuture<Void> processUserLogs(List<User> users) {
+        users.forEach(this::processUser);
+        return CompletableFuture.completedFuture(null);
+    }
+
+    private void processUser(User newUser) {
+        Query query = new Query(Criteria.where("email").is(newUser.getUserLog().getEmail()));
+        UserLog newUserLog = newUser.getUserLog();
+        
+        // Find existing record
+        User existingUser = mongoTemplate.findOne(query, User.class, COLLECTION_NAME);
+        
+        if (existingUser == null) {
+            // Case 1: Doesn't exist - insert new
+            newUser.setLastData(getCurrentDateTime());
+            mongoTemplate.insert(newUser, COLLECTION_NAME);
+        } else if (!userLogsMatch(existingUser.getUserLog(), newUserLog)) {
+            // Case 2: Exists but doesn't match - update old and insert new
+            // Update existing record with current timestamp
+            Update update = new Update()
+                .set("lastData", getCurrentDateTime());
+            mongoTemplate.updateFirst(query, update, COLLECTION_NAME);
+            
+            // Insert new record
+            newUser.setLastData(getCurrentDateTime());
+            mongoTemplate.insert(newUser, COLLECTION_NAME);
+        }
+        // Case 3: Exists and matches - do nothing
+    }
+
+    private boolean userLogsMatch(UserLog log1, UserLog log2) {
+        if (log1 == log2) return true;
+        if (log1 == null || log2 == null) return false;
+        
+        return Objects.equals(log1.getEmail(), log2.getEmail()) &&
+               Objects.equals(log1.getLocation(), log2.getLocation());
+    }
+
+    private String getCurrentDateTime() {
+        return LocalDateTime.now().format(DATE_FORMATTER);
+    }
+}
 
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.data.mongodb.core.MongoTemplate;
