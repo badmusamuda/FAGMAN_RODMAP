@@ -1,3 +1,131 @@
+import java.util.*;
+
+public class PyramidMetricsService {
+
+    public static class Result {
+        public int directReports;
+        public int cumulativeOfUniqueRelatedDescendantReports;
+
+        public Result(int directReports, int cumulativeReports) {
+            this.directReports = directReports;
+            this.cumulativeOfUniqueRelatedDescendantReports = cumulativeReports;
+        }
+
+        @Override
+        public String toString() {
+            return String.format("Result{direct=%d, cumulative=%d}",
+                    directReports, cumulativeOfUniqueRelatedDescendantReports);
+        }
+    }
+    public static Map<String, Result> calculatePyramidValue(
+            Map<String, List<String>> employeeReports,
+            String startEmployee) {
+
+        Set<String> allConnectedEmployees = new HashSet<>();
+        buildConnectedEmployeeSet(employeeReports, startEmployee, allConnectedEmployees);
+
+        if (hasCycle(employeeReports, allConnectedEmployees)) {
+            System.out.println("Circular relationship detected between employee hierarchy");
+            throw new IllegalArgumentException("Circular relationship detected in employee hierarchy");
+        }
+
+        Map<String, Result> results = new HashMap<>();
+        Map<String, Set<String>> memoizedDescendants = new HashMap<>();
+
+        for (String employee : allConnectedEmployees) {
+            Set<String> allDescendants = getAllDescendants(employee, employeeReports, memoizedDescendants);
+            List<String> directReports = employeeReports.getOrDefault(employee, new ArrayList<>());
+
+            results.put(employee, new Result(directReports.size(), allDescendants.size()));
+        }
+
+        return results;
+    }
+
+    private static void buildConnectedEmployeeSet(Map<String, List<String>> employeeReports,
+                                                  String employee, Set<String> visited) {
+        if (visited.contains(employee)) {
+            return;
+        }
+
+        visited.add(employee);
+        List<String> reports = employeeReports.get(employee);
+        if (reports != null) {
+            for (String report : reports) {
+                buildConnectedEmployeeSet(employeeReports, report, visited);
+            }
+        }
+        for (Map.Entry<String, List<String>> entry : employeeReports.entrySet()) {
+            if (entry.getValue().contains(employee)) {
+                buildConnectedEmployeeSet(employeeReports, entry.getKey(), visited);
+            }
+        }
+    }
+    
+    private static boolean hasCycle(Map<String, List<String>> employeeReports,
+                                    Set<String> employees) {
+        Set<String> visited = new HashSet<>();
+        Set<String> recursionStack = new HashSet<>();
+
+        for (String employee : employees) {
+            if (!visited.contains(employee)) {
+                if (hasCycleDFS(employee, employeeReports, visited, recursionStack)) {
+                    System.out.println("Circular relationship among "+employee+"----------------"+employeeReports);
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    private static boolean hasCycleDFS(String employee, Map<String, List<String>> employeeReports,
+                                       Set<String> visited, Set<String> recursionStack) {
+        visited.add(employee);
+        recursionStack.add(employee);
+
+        List<String> reports = employeeReports.get(employee);
+        if (reports != null) {
+            for (String report : reports) {
+                if (!visited.contains(report)) {
+                    if (hasCycleDFS(report, employeeReports, visited, recursionStack)) {
+                        return true;
+                    }
+                } else if (recursionStack.contains(report)) {
+                    return true; // Cycle detected
+                }
+            }
+        }
+
+        recursionStack.remove(employee);
+        return false;
+    }
+    
+    private static Set<String> getAllDescendants(String employee,
+                                                 Map<String, List<String>> employeeReports,
+                                                 Map<String, Set<String>> memoized) {
+        if (memoized.containsKey(employee)) {
+            return memoized.get(employee);
+        }
+
+        Set<String> allDescendants = new HashSet<>();
+        List<String> directReports = employeeReports.get(employee);
+
+        if (directReports != null) {
+            for (String report : directReports) {
+                allDescendants.add(report); 
+                allDescendants.addAll(getAllDescendants(report, employeeReports, memoized));
+            }
+        }
+
+        memoized.put(employee, allDescendants);
+        return allDescendants;
+    }
+
+}
+
+
+
+
 https://web.stanford.edu/class/datasci112/lectures/lecture6.pdf
 
 https://archive.uea.ac.uk/jtm/contents.htm
