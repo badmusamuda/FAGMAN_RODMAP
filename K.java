@@ -1,3 +1,74 @@
+import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.data.mongodb.core.query.Criteria;
+import org.springframework.data.mongodb.core.query.Query;
+import org.springframework.stereotype.Service;
+import java.time.LocalDate;
+import java.util.List;
+
+@Service
+public class UserService {
+
+    private final MongoTemplate mongoTemplate;
+
+    public UserService(MongoTemplate mongoTemplate) {
+        this.mongoTemplate = mongoTemplate;
+    }
+
+    public List<User> findUsersByCriteria(String keyValue, 
+                                        String region, 
+                                        String country, 
+                                        LocalDate startDate, 
+                                        LocalDate endDate) {
+        // Build the query with multiple criteria
+        Criteria criteria = Criteria.where("key.value").is(keyValue)
+            .and("location.region").is(region)
+            .and("location.country").is(country)
+            .and("date").gte(startDate).lte(endDate);
+
+        Query query = new Query(criteria);
+        
+        return mongoTemplate.find(query, User.class);
+    }
+}
+
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.core.convert.converter.Converter;
+import org.springframework.data.mongodb.core.convert.MongoCustomConversions;
+import java.time.LocalDate;
+import java.time.ZoneId;
+import java.util.Date;
+import java.util.ArrayList;
+import java.util.List;
+
+@Configuration
+public class MongoConfig {
+
+    @Bean
+    public MongoCustomConversions customConversions() {
+        List<Converter<?,?>> converters = new ArrayList<>();
+        converters.add(new LocalDateToDateConverter());
+        converters.add(new DateToLocalDateConverter());
+        return new MongoCustomConversions(converters);
+    }
+
+    static class LocalDateToDateConverter implements Converter<LocalDate, Date> {
+        @Override
+        public Date convert(LocalDate source) {
+            return Date.from(source.atStartOfDay(ZoneId.systemDefault()).toInstant();
+        }
+    }
+
+    static class DateToLocalDateConverter implements Converter<Date, LocalDate> {
+        @Override
+        public LocalDate convert(Date source) {
+            return source.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+        }
+    }
+}
+
+
 import java.util.*;
 
 public class PyramidMetricsService {
