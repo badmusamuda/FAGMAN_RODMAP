@@ -1,3 +1,8 @@
+https://muslimmatters.org/2011/07/22/yasir-qadhi-the-definition-of-%E2%80%98travel%E2%80%99-safar-according-to-islamic-law-part-3/
+
+https://abukhadeejah.com/what-is-a-journey-that-allows-you-to-shorten-the-prayer-and-requires-a-woman-to-take-a-mahram/
+
+
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
