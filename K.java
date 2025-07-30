@@ -1,3 +1,222 @@
+
+package com.example.graphqlclient;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class GraphqlClientApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(GraphqlClientApplication.class, args);
+    }
+}
+
+
+package com.example.graphqlclient.dto;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import java.util.List;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class GraphQLResponse {
+    private Data data;
+    private List<Error> errors;
+
+    public Data getData() { return data; }
+    public void setData(Data data) { this.data = data; }
+    public List<Error> getErrors() { return errors; }
+    public void setErrors(List<Error> errors) { this.errors = errors; }
+
+    @JsonIgnoreProperties(ignoreUnknown = true)
+    public static class Data {
+        private List<Worker> getWorkersByIds;
+
+        public List<Worker> getGetWorkersByIds() { return getWorkersByIds; }
+        public void setGetWorkersByIds(List<Worker> getWorkersByIds) { this.getWorkersByIds = getWorkersByIds; }
+    }
+
+    @JsonIgnoreProperties(ignoreUnknown = true)
+    public static class Error {
+        private String message;
+        private List<String> path;
+
+        public String getMessage() { return message; }
+        public void setMessage(String message) { this.message = message; }
+        public List<String> getPath() { return path; }
+        public void setPath(List<String> path) { this.path = path; }
+    }
+}
+
+@JsonIgnoreProperties(ignoreUnknown = true)
+class Worker {
+    private Manager manager;
+
+    public Manager getManager() { return manager; }
+    public void setManager(Manager manager) { this.manager = manager; }
+}
+
+@JsonIgnoreProperties(ignoreUnknown = true)
+class Manager {
+    private List<PeManager> peManagers;
+    private String managerProjectType;
+
+    public List<PeManager> getPeManagers() { return peManagers; }
+    public void setPeManagers(List<PeManager> peManagers) { this.peManagers = peManagers; }
+    public String getManagerProjectType() { return managerProjectType; }
+    public void setManagerProjectType(String managerProjectType) { this.managerProjectType = managerProjectType; }
+}
+
+@JsonIgnoreProperties(ignoreUnknown = true)
+class PeManager {
+    private String name;
+    private String id;
+
+    public String getName() { return name; }
+    public void setName(String name) { this.name = name; }
+    public String getId() { return id; }
+    public void setId(String id) { this.id = id; }
+}
+
+// GraphQL Request DTO
+package com.example.graphqlclient.dto;
+
+import java.util.Map;
+
+public class GraphQLRequest {
+    private String query;
+    private Map<String, Object> variables;
+
+    public GraphQLRequest() {}
+
+    public GraphQLRequest(String query, Map<String, Object> variables) {
+        this.query = query;
+        this.variables = variables;
+    }
+
+    public String getQuery() { return query; }
+    public void setQuery(String query) { this.query = query; }
+    public Map<String, Object> getVariables() { return variables; }
+    public void setVariables(Map<String, Object> variables) { this.variables = variables; }
+}
+
+// GraphQL Client Service
+package com.example.graphqlclient.service;
+
+import com.example.graphqlclient.dto.GraphQLRequest;
+import com.example.graphqlclient.dto.GraphQLResponse;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
+import org.springframework.stereotype.Service;
+import org.springframework.web.reactive.function.client.WebClient;
+import reactor.core.publisher.Mono;
+
+import java.util.Map;
+
+@Service
+public class GraphQLClientService {
+
+    private final WebClient webClient;
+
+    @Value("${graphql.endpoint:https://www.sssss-hcddsdsdm.cfdsddsdt.sdsdsd/api/v1/graphql}")
+    private String graphqlEndpoint;
+
+    public GraphQLClientService(WebClient.Builder webClientBuilder) {
+        this.webClient = webClientBuilder
+                .defaultHeader(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)
+                .build();
+    }
+
+    public Mono<GraphQLResponse> executeQuery(String query, Map<String, Object> variables) {
+        GraphQLRequest request = new GraphQLRequest(query, variables);
+        
+        return webClient.post()
+                .uri(graphqlEndpoint)
+                .header(HttpHeaders.AUTHORIZATION, "Bearer YOUR_TOKEN_HERE") // Add if needed
+                .bodyValue(request)
+                .retrieve()
+                .bodyToMono(GraphQLResponse.class);
+    }
+
+    public Mono<GraphQLResponse> getWorkersByIds(String workerIds) {
+        String query = """
+                query MyQuery($workerIds: String!) {
+                    getWorkersByIds(workerIds: $workerIds) {
+                        manager {
+                            peManagers {
+                                name
+                                id
+                            }
+                            managerProjectType
+                        }
+                    }
+                }
+                """;
+
+        Map<String, Object> variables = Map.of("workerIds", workerIds);
+        return executeQuery(query, variables);
+    }
+}
+
+// REST Controller
+package com.example.graphqlclient.controller;
+
+import com.example.graphqlclient.dto.GraphQLResponse;
+import com.example.graphqlclient.service.GraphQLClientService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+import reactor.core.publisher.Mono;
+
+@RestController
+@RequestMapping("/api")
+public class WorkerController {
+
+    @Autowired
+    private GraphQLClientService graphQLClientService;
+
+    @GetMapping("/workers/{workerIds}")
+    public Mono<GraphQLResponse> getWorkers(@PathVariable String workerIds) {
+        return graphQLClientService.getWorkersByIds(workerIds);
+    }
+
+    @PostMapping("/workers/query")
+    public Mono<GraphQLResponse> executeCustomQuery(@RequestBody QueryRequest request) {
+        return graphQLClientService.executeQuery(request.getQuery(), request.getVariables());
+    }
+
+    public static class QueryRequest {
+        private String query;
+        private java.util.Map<String, Object> variables;
+
+        public String getQuery() { return query; }
+        public void setQuery(String query) { this.query = query; }
+        public java.util.Map<String, Object> getVariables() { return variables; }
+        public void setVariables(java.util.Map<String, Object> variables) { this.variables = variables; }
+    }
+}
+
+// Configuration
+package com.example.graphqlclient.config;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.reactive.function.client.WebClient;
+
+@Configuration
+public class WebClientConfig {
+
+    @Bean
+    public WebClient.Builder webClientBuilder() {
+        return WebClient.builder();
+    }
+}
+
+
+
+
+
+
+
 https://muslimmatters.org/2011/07/22/yasir-qadhi-the-definition-of-%E2%80%98travel%E2%80%99-safar-according-to-islamic-law-part-3/
 
 https://abukhadeejah.com/what-is-a-journey-that-allows-you-to-shorten-the-prayer-and-requires-a-woman-to-take-a-mahram/
