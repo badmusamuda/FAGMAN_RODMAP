@@ -1,4 +1,6 @@
-
+COEMA - The supernatural way of semantic information retrieval
+Inside the world of "Did You Mean" through Material Balance
+    
 package com.example.graphqlclient;
 
 import org.springframework.boot.SpringApplication;
