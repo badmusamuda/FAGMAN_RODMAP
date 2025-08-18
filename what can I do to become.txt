@@ -1,0 +1,862 @@
+    //what can I do to become successful //
+    //what is the reality of life
+    //what can you say about love
+        //what do you think about engineering career
+    //what makes you feel love is not real
+
+people--------------7.2856207
+pay--------------7.201106
+attention--------------0.72500795
+BEFORE DILUTION=====================>{465=[7.201106], 1346=[0.72500795], 1418=[7.2856207]}
+***AFTER*** DILUTION=====================>[7.201106, 0.72500795, 7.2856207]
+
+
+=================>full------values..............true.............[0, 5]-------------------------------5
+{"tag":{"weight":3.994171,"hitMiss":5,"location":5,"context":[0.72500795,7.2856207],"locationHits":0,"locationRef":{"0.72500795":{"line":0,"count":0,"position":[5]},"7.2856207":{"line":0,"count":0,"position":[0]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>lessen------values..............true.............[0, 1]-------------------------------1
+{"tag":{"weight":5.689556,"hitMiss":1,"location":1,"context":[0.72500795,7.2856207],"locationHits":0,"locationRef":{"0.72500795":{"line":0,"count":0,"position":[1]},"7.2856207":{"line":0,"count":0,"position":[0]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>party------values..............true.............[1, 7]-------------------------------6
+{"tag":{"weight":7.1270056,"hitMiss":7,"location":7,"context":[0.72500795,7.2856207],"locationHits":0,"locationRef":{"0.72500795":{"line":0,"count":0,"position":[7]},"7.2856207":{"line":0,"count":0,"position":[1]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>How To Get Rich In 2025: Proven Strategies For Building Wealth
+------values..............true.............[4, 6]-------------------------------2
+{"tag":{"weight":21.906809,"hitMiss":6,"location":6,"context":[7.201106,7.2856207],"locationHits":0,"locationRef":{"7.201106":{"line":0,"count":0,"position":[6]},"7.2856207":{"line":0,"count":0,"position":[4,8]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>bargain------values..............true.............[0, 0]-------------------------------0
+{"tag":{"weight":0.8591302,"hitMiss":5,"location":5,"context":[7.201106,0.72500795],"locationHits":0,"locationRef":{"7.201106":{"line":0,"count":0,"position":[0]},"0.72500795":{"line":0,"count":0,"position":[0,0,5]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>What Happens In The Body During Exercise-Induced Urticaria------values..............true.............[8, 50, 50]--------------------------------8
+{"tag":{"weight":22.375353,"hitMiss":62,"location":62,"context":[7.201106,0.72500795,7.2856207],"locationHits":0,"locationRef":{"7.201106":{"line":0,"count":0,"position":[50]},"0.72500795":{"line":0,"count":0,"position":[50,62]},"7.2856207":{"line":0,"count":0,"position":[8,29,53]}}},"counter":3,"closestNeigbhour":0}
+
+
+=================>AI 2027------values..............true.............[12, 40, 226]-------------------------------174
+{"tag":{"weight":22.594204,"hitMiss":226,"location":226,"context":[7.201106,0.72500795,7.2856207],"locationHits":0,"locationRef":{"7.201106":{"line":0,"count":0,"position":[40,87,158]},"0.72500795":{"line":0,"count":0,"position":[226]},"7.2856207":{"line":0,"count":0,"position":[12,106,113,138,142,142,348,414,463,466,468,526,697]}}},"counter":3,"closestNeigbhour":0}
+
+
+=================>bill------values..............true.............[2, 11]-------------------------------9
+{"tag":{"weight":0.9572465,"hitMiss":16,"location":16,"context":[7.201106,0.72500795],"locationHits":0,"locationRef":{"7.201106":{"line":0,"count":0,"position":[11]},"0.72500795":{"line":0,"count":0,"position":[2,11,16]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>concentrate------values..............true.............[0, 2]-------------------------------2
+{"tag":{"weight":1.9350086,"hitMiss":0,"location":0,"context":[0.72500795,7.2856207],"locationHits":0,"locationRef":{"0.72500795":{"line":0,"count":0,"position":[0]},"7.2856207":{"line":0,"count":0,"position":[2]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>attend------values..............true.............[0, 6]-------------------------------6
+{"tag":{"weight":0.7175067,"hitMiss":6,"location":6,"context":[7.201106,0.72500795],"locationHits":0,"locationRef":{"7.201106":{"line":0,"count":0,"position":[6,6]},"0.72500795":{"line":0,"count":0,"position":[0,0,1,6,6]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>BBC boss says disinformation ‘trust crisis’ putting social fabric of UK at risk | BBC | The Guardian------values..............true.............[19, 38]-------------------------------19
+{"tag":{"weight":22.56274,"hitMiss":38,"location":38,"context":[7.201106,7.2856207],"locationHits":0,"locationRef":{"7.201106":{"line":0,"count":0,"position":[38]},"7.2856207":{"line":0,"count":0,"position":[19,20,28,43]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>Kashmir crisis: what is Lashkar-e-Taiba and is it supported by Pakistan? | India | The Guardian------values..............true.............[5, 6]-------------------------------1
+{"tag":{"weight":22.468922,"hitMiss":5,"location":5,"context":[0.72500795,7.2856207],"locationHits":0,"locationRef":{"0.72500795":{"line":0,"count":0,"position":[5]},"7.2856207":{"line":0,"count":0,"position":[6,56]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>produce------values..............true.............[0, 4]-------------------------------4
+{"tag":{"weight":7.843878,"hitMiss":4,"location":4,"context":[7.201106,0.72500795],"locationHits":0,"locationRef":{"7.201106":{"line":0,"count":0,"position":[4]},"0.72500795":{"line":0,"count":0,"position":[0,4]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>Pope Francis, pontiff who pushed church boundaries — but didn’t break them
+------values..............true.............[20, 42]-------------------------------22
+{"tag":{"weight":22.343899,"hitMiss":42,"location":42,"context":[0.72500795,7.2856207],"locationHits":0,"locationRef":{"0.72500795":{"line":0,"count":0,"position":[42]},"7.2856207":{"line":0,"count":0,"position":[20,21,37,49,54,61]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>Glossary | Health Careers------values..............true.............[0, 0]-------------------------------0
+{"tag":{"weight":22.634592,"hitMiss":0,"location":0,"context":[7.201106,0.72500795],"locationHits":0,"locationRef":{"7.201106":{"line":0,"count":0,"position":[0,2]},"0.72500795":{"line":0,"count":0,"position":[0]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>Harnessing chaos in Cloudflare offices------values..............true.............[17, 46]-------------------------------29
+{"tag":{"weight":22.462677,"hitMiss":17,"location":17,"context":[0.72500795,7.2856207],"locationHits":0,"locationRef":{"0.72500795":{"line":0,"count":0,"position":[17]},"7.2856207":{"line":0,"count":0,"position":[46]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>No 10 rules out reversing cuts to winter fuel payments – UK politics live | Politics | The Guardian------values..............true.............[12, 215]-------------------------------203
+{"tag":{"weight":22.431555,"hitMiss":898,"location":898,"context":[7.201106,7.2856207],"locationHits":0,"locationRef":{"7.201106":{"line":0,"count":0,"position":[215,240,241,256,368,602,627,628,643,755,883,895,895,898,898]},"7.2856207":{"line":0,"count":0,"position":[12,26,67,114,119,122,123,271,272,272,305,371,382,399,413,454,501,506,509,510,658,659,659,692,761,772,796,822,824,826,827,921,922,922,944]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>RECONSIDER - Signal v. Noise------values..............true.............[2, 62, 65]-------------------------------1
+{"tag":{"weight":22.47031,"hitMiss":110,"location":110,"context":[7.201106,0.72500795,7.2856207],"locationHits":0,"locationRef":{"7.201106":{"line":0,"count":0,"position":[65,80]},"0.72500795":{"line":0,"count":0,"position":[62,110]},"7.2856207":{"line":0,"count":0,"position":[2,8,9,18,19,19,24,32,53,62,96,110]}}},"counter":3,"closestNeigbhour":0}
+
+
+=================>strict------values..............true.............[2, 2]-------------------------------0
+{"tag":{"weight":9.582936,"hitMiss":2,"location":2,"context":[7.201106,0.72500795],"locationHits":0,"locationRef":{"7.201106":{"line":0,"count":0,"position":[2]},"0.72500795":{"line":0,"count":0,"position":[2]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>Can green card, visa holders get Real ID, required to fly in the US? | News | Al Jazeera------values..............true.............[4, 22]-------------------------------18
+{"tag":{"weight":22.540758,"hitMiss":22,"location":22,"context":[7.201106,7.2856207],"locationHits":0,"locationRef":{"7.201106":{"line":0,"count":0,"position":[22]},"7.2856207":{"line":0,"count":0,"position":[4,12,13,14,14,16,29,33,48,51,51,53,54,55,60]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>breeding------values..............true.............[2, 2]-------------------------------0
+{"tag":{"weight":1.2841007,"hitMiss":2,"location":2,"context":[7.201106,0.72500795],"locationHits":0,"locationRef":{"7.201106":{"line":0,"count":0,"position":[2]},"0.72500795":{"line":0,"count":0,"position":[2]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>Exercise-induced Urticaria
+Last Updated September 2024 | This article was created by familydoctor.org editorial staff and reviewed by Robert "Chuck" Rich, Jr., MD, FAAFP------values..............true.............[9, 18, 18]--------------------------------9
+{"tag":{"weight":22.376331,"hitMiss":18,"location":18,"context":[7.201106,0.72500795,7.2856207],"locationHits":0,"locationRef":{"7.201106":{"line":0,"count":0,"position":[18]},"0.72500795":{"line":0,"count":0,"position":[18]},"7.2856207":{"line":0,"count":0,"position":[9,17,17]}}},"counter":3,"closestNeigbhour":0}
+
+
+=================>pension------values..............true.............[1, 4]-------------------------------3
+{"tag":{"weight":7.2543783,"hitMiss":4,"location":4,"context":[7.201106,0.72500795],"locationHits":0,"locationRef":{"7.201106":{"line":0,"count":0,"position":[4]},"0.72500795":{"line":0,"count":0,"position":[1,4]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>Kashmir crisis: what is Lashkar-e-Taiba and is it supported by Pakistan? | India | The Guardian------values..............true.............[5, 6]-------------------------------1
+{"tag":{"weight":22.469997,"hitMiss":5,"location":5,"context":[0.72500795,7.2856207],"locationHits":0,"locationRef":{"0.72500795":{"line":0,"count":0,"position":[5]},"7.2856207":{"line":0,"count":0,"position":[6,56]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>publicness------values..............true.............[0, 0]-------------------------------0
+{"tag":{"weight":7.918379,"hitMiss":0,"location":0,"context":[0.72500795,7.2856207],"locationHits":0,"locationRef":{"0.72500795":{"line":0,"count":0,"position":[0]},"7.2856207":{"line":0,"count":0,"position":[0]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>rate------values..............true.............[2, 4]-------------------------------2
+{"tag":{"weight":8.094418,"hitMiss":2,"location":2,"context":[7.201106,0.72500795],"locationHits":0,"locationRef":{"7.201106":{"line":0,"count":0,"position":[4]},"0.72500795":{"line":0,"count":0,"position":[2,2]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>When to give up
+------values..............true.............[0, 2]-------------------------------2
+{"tag":{"weight":22.001211,"hitMiss":2,"location":2,"context":[7.201106,7.2856207],"locationHits":0,"locationRef":{"7.201106":{"line":0,"count":0,"position":[2]},"7.2856207":{"line":0,"count":0,"position":[0,1]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>THE ART OF COMPUTER PROGRAMMING (THIRD EDITION)------values..............true.............[90, 323, 4026]-------------------------------3613
+{"tag":{"weight":22.133965,"hitMiss":22122,"location":22122,"context":[7.201106,0.72500795,7.2856207],"locationHits":0,"locationRef":{"7.201106":{"line":0,"count":0,"position":[4026,10262,12508,17332,22122]},"0.72500795":{"line":0,"count":0,"position":[323,8598,12508,16392,17842,22122]},"7.2856207":{"line":0,"count":0,"position":[90,93,168,173,244,283,289,321,435,602,995,2741,2950,4938,5524,6223,7067,7305,7435,7855,8340,8944,8951,9603,9843,9858,10552,10683,11468,11481,11527,11554,11563,11573,11585,11601,11611,11617,11741,12003,12034,12138,12141,12295,13535,15206,15216,16398,17053,17986,17992,18081,18118,18154,20450,22098,22098,22108,22122,22386,24731,24733,24741]}}},"counter":3,"closestNeigbhour":0}
+
+
+=================>Temporal Graph Benchmark
+for Machine Learning on Temporal Graphs------values..............true.............[432, 625]-------------------------------193
+{"tag":{"weight":22.10434,"hitMiss":728,"location":728,"context":[0.72500795,7.2856207],"locationHits":0,"locationRef":{"0.72500795":{"line":0,"count":0,"position":[432,574,728]},"7.2856207":{"line":0,"count":0,"position":[625]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>yield------values..............true.............[0, 0]-------------------------------0
+{"tag":{"weight":11.126229,"hitMiss":0,"location":0,"context":[7.201106,0.72500795],"locationHits":0,"locationRef":{"7.201106":{"line":0,"count":0,"position":[0]},"0.72500795":{"line":0,"count":0,"position":[0,0]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>lot------values..............true.............[3, 5]-------------------------------2
+{"tag":{"weight":5.8795137,"hitMiss":5,"location":5,"context":[7.201106,7.2856207],"locationHits":0,"locationRef":{"7.201106":{"line":0,"count":0,"position":[5]},"7.2856207":{"line":0,"count":0,"position":[3,5]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>common------values..............true.............[0, 6]-------------------------------6
+{"tag":{"weight":1.9149053,"hitMiss":8,"location":8,"context":[0.72500795,7.2856207],"locationHits":0,"locationRef":{"0.72500795":{"line":0,"count":0,"position":[0,8]},"7.2856207":{"line":0,"count":0,"position":[6]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>Taiwan confident of US support under Trump, minister says | Politics News | Al Jazeera------values..............true.............[21, 34]-------------------------------13
+{"tag":{"weight":22.393068,"hitMiss":21,"location":21,"context":[7.201106,7.2856207],"locationHits":0,"locationRef":{"7.201106":{"line":0,"count":0,"position":[21]},"7.2856207":{"line":0,"count":0,"position":[34,34,45]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>Artificial intelligence - Wikipedia------values..............true.............[29, 39]-------------------------------10
+{"tag":{"weight":22.479244,"hitMiss":2154,"location":2154,"context":[0.72500795,7.2856207],"locationHits":0,"locationRef":{"0.72500795":{"line":0,"count":0,"position":[29,69,2154]},"7.2856207":{"line":0,"count":0,"position":[39,39,153,163,259,285,374,376,381,390,392,429,481,481,522,522,529,529,654,675,731,777,1788,1890,1957,2071,2074,2154,2154]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>‘A signal of simplicity’: Pope Francis’s funeral will be his final humble gesture
+------values..............true.............[1, 5]-------------------------------4
+{"tag":{"weight":22.338522,"hitMiss":7,"location":7,"context":[7.201106,7.2856207],"locationHits":0,"locationRef":{"7.201106":{"line":0,"count":0,"position":[1,5,6,7]},"7.2856207":{"line":0,"count":0,"position":[5,9]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>How to become a millionaire: 7 steps to reach your goal
+------values..............true.............[5, 22]-------------------------------17
+{"tag":{"weight":21.90885,"hitMiss":35,"location":35,"context":[7.201106,7.2856207],"locationHits":0,"locationRef":{"7.201106":{"line":0,"count":0,"position":[22,32,33,33,35,35]},"7.2856207":{"line":0,"count":0,"position":[5,6,34]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>post-obitbond------values..............true.............[0, 0]-------------------------------0
+{"tag":{"weight":7.6511164,"hitMiss":0,"location":0,"context":[7.201106,0.72500795],"locationHits":0,"locationRef":{"7.201106":{"line":0,"count":0,"position":[0]},"0.72500795":{"line":0,"count":0,"position":[0,0]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>‘One day I overheard my boss saying: just put it in ChatGPT’: the workers who lost their jobs to AI | Artificial intelligence (AI) | The Guardian------values..............true.............[5, 49]-------------------------------44
+{"tag":{"weight":22.627178,"hitMiss":105,"location":105,"context":[7.201106,7.2856207],"locationHits":0,"locationRef":{"7.201106":{"line":0,"count":0,"position":[49,105]},"7.2856207":{"line":0,"count":0,"position":[5,13,19,20,32,43,59,86,99,103,104,105]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>moot------values..............true.............[6, 6]-------------------------------0
+{"tag":{"weight":6.373684,"hitMiss":6,"location":6,"context":[0.72500795,7.2856207],"locationHits":0,"locationRef":{"0.72500795":{"line":0,"count":0,"position":[6]},"7.2856207":{"line":0,"count":0,"position":[6]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>montdepiete------values..............true.............[0, 0]-------------------------------0
+{"tag":{"weight":6.3854,"hitMiss":0,"location":0,"context":[0.72500795,7.2856207],"locationHits":0,"locationRef":{"0.72500795":{"line":0,"count":0,"position":[0]},"7.2856207":{"line":0,"count":0,"position":[0]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>consider------values..............true.............[0, 2]-------------------------------2
+{"tag":{"weight":2.0286899,"hitMiss":2,"location":2,"context":[7.201106,0.72500795],"locationHits":0,"locationRef":{"7.201106":{"line":0,"count":0,"position":[2]},"0.72500795":{"line":0,"count":0,"position":[0,2]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>garnishment------values..............true.............[1, 2]-------------------------------1
+{"tag":{"weight":4.061348,"hitMiss":1,"location":1,"context":[7.201106,0.72500795],"locationHits":0,"locationRef":{"7.201106":{"line":0,"count":0,"position":[2]},"0.72500795":{"line":0,"count":0,"position":[1]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>Want People to Pay Attention? Lead With Impact. - Chris Fenning------values..............true.............[0, 0, 8]-------------------------------8
+{"tag":{"weight":22.636696,"hitMiss":16,"location":16,"context":[7.201106,0.72500795,7.2856207],"locationHits":0,"locationRef":{"7.201106":{"line":0,"count":0,"position":[0,2,7]},"0.72500795":{"line":0,"count":0,"position":[8,13,16]},"7.2856207":{"line":0,"count":0,"position":[0,0,2,12]}}},"counter":3,"closestNeigbhour":0}
+
+
+=================>‘Spiral of silence’: climate action is very popular, so why don’t people realise it?
+------values..............true.............[0, 25]-------------------------------25
+{"tag":{"weight":22.363274,"hitMiss":27,"location":27,"context":[7.201106,7.2856207],"locationHits":0,"locationRef":{"7.201106":{"line":0,"count":0,"position":[25,27]},"7.2856207":{"line":0,"count":0,"position":[0,6,7,7,10,12,14,14,15,15,17,17,20,20,20,21,21,22,23,24,24,25,25,26,32,34,35,36,36,37,38,38,41,46,51,51,52]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>Who doesn’t want to be a millionaire? 
+
+------values..............true.............[1, 18]-------------------------------17
+{"tag":{"weight":21.910154,"hitMiss":31,"location":31,"context":[7.201106,7.2856207],"locationHits":0,"locationRef":{"7.201106":{"line":0,"count":0,"position":[18,28,29,29,31,31]},"7.2856207":{"line":0,"count":0,"position":[1,2,30]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>observe------values..............true.............[0, 1]-------------------------------1
+{"tag":{"weight":6.735174,"hitMiss":3,"location":3,"context":[7.201106,0.72500795],"locationHits":0,"locationRef":{"7.201106":{"line":0,"count":0,"position":[1]},"0.72500795":{"line":0,"count":0,"position":[0,0,1,1,1,3,3]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>Ex-Barclays boss Jes Staley admits having sex with member of Jeffrey Epstein staff------values..............true.............[15, 19]-------------------------------4
+{"tag":{"weight":21.925373,"hitMiss":19,"location":19,"context":[0.72500795,7.2856207],"locationHits":0,"locationRef":{"0.72500795":{"line":0,"count":0,"position":[19]},"7.2856207":{"line":0,"count":0,"position":[15]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>Charles became king on 8 September 2022 ------values..............true.............[18, 38]-------------------------------20
+{"tag":{"weight":21.987888,"hitMiss":18,"location":18,"context":[0.72500795,7.2856207],"locationHits":0,"locationRef":{"0.72500795":{"line":0,"count":0,"position":[18]},"7.2856207":{"line":0,"count":0,"position":[38,39]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>cure------values..............true.............[0, 9]-------------------------------9
+{"tag":{"weight":2.3695397,"hitMiss":9,"location":9,"context":[7.201106,0.72500795],"locationHits":0,"locationRef":{"7.201106":{"line":0,"count":0,"position":[9]},"0.72500795":{"line":0,"count":0,"position":[0,0,0,1,2,9,9,9]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>Gaping Vaginal: Exploring Vaginal Anatomy | Conceive Plus®------values..............true.............[3, 99]-------------------------------96
+{"tag":{"weight":22.628588,"hitMiss":99,"location":99,"context":[0.72500795,7.2856207],"locationHits":0,"locationRef":{"0.72500795":{"line":0,"count":0,"position":[99]},"7.2856207":{"line":0,"count":0,"position":[3,77]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>scotale------values..............true.............[0, 0]-------------------------------0
+{"tag":{"weight":8.763225,"hitMiss":0,"location":0,"context":[7.201106,7.2856207],"locationHits":0,"locationRef":{"7.201106":{"line":0,"count":0,"position":[0]},"7.2856207":{"line":0,"count":0,"position":[0]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>weigh------values..............true.............[4, 6]-------------------------------2
+{"tag":{"weight":10.8882065,"hitMiss":6,"location":6,"context":[7.201106,0.72500795],"locationHits":0,"locationRef":{"7.201106":{"line":0,"count":0,"position":[4]},"0.72500795":{"line":0,"count":0,"position":[6]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>How to become a millionaire: 7 steps to reach your goal------values..............true.............[1, 18]-------------------------------17
+{"tag":{"weight":21.917366,"hitMiss":31,"location":31,"context":[7.201106,7.2856207],"locationHits":0,"locationRef":{"7.201106":{"line":0,"count":0,"position":[18,28,29,29,31,31]},"7.2856207":{"line":0,"count":0,"position":[1,2,30]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>disregard------values..............true.............[0, 0]-------------------------------0
+{"tag":{"weight":2.9428508,"hitMiss":1,"location":1,"context":[7.201106,0.72500795],"locationHits":0,"locationRef":{"7.201106":{"line":0,"count":0,"position":[0]},"0.72500795":{"line":0,"count":0,"position":[0,0,0,1,1]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>Exercise-induced Urticaria
+Last Updated September 2024 | This article was created by familydoctor.org editorial staff and reviewed by Robert "Chuck" Rich, Jr., MD, FAAFP------values..............true.............[9, 18, 18]--------------------------------9
+{"tag":{"weight":22.378012,"hitMiss":18,"location":18,"context":[7.201106,0.72500795,7.2856207],"locationHits":0,"locationRef":{"7.201106":{"line":0,"count":0,"position":[18]},"0.72500795":{"line":0,"count":0,"position":[18]},"7.2856207":{"line":0,"count":0,"position":[9,17,17]}}},"counter":3,"closestNeigbhour":0}
+
+
+=================>calculated------values..............true.............[0, 1]-------------------------------1
+{"tag":{"weight":1.4348257,"hitMiss":0,"location":0,"context":[0.72500795,7.2856207],"locationHits":0,"locationRef":{"0.72500795":{"line":0,"count":0,"position":[0]},"7.2856207":{"line":0,"count":0,"position":[1]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>publication------values..............true.............[0, 2]-------------------------------2
+{"tag":{"weight":7.916877,"hitMiss":2,"location":2,"context":[0.72500795,7.2856207],"locationHits":0,"locationRef":{"0.72500795":{"line":0,"count":0,"position":[2]},"7.2856207":{"line":0,"count":0,"position":[0]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>10 Signs of a Cheating Spouse. Medically reviewed by Lori Lawrenz, PsyD — Written by Sarah Barkley on June 27, 2024------values..............true.............[2, 6, 6]--------------------------------2
+{"tag":{"weight":22.34848,"hitMiss":6,"location":6,"context":[7.201106,0.72500795,7.2856207],"locationHits":0,"locationRef":{"7.201106":{"line":0,"count":0,"position":[6]},"0.72500795":{"line":0,"count":0,"position":[6]},"7.2856207":{"line":0,"count":0,"position":[2]}}},"counter":3,"closestNeigbhour":0}
+
+
+=================>gratuitous------values..............true.............[0, 0]-------------------------------0
+{"tag":{"weight":4.264724,"hitMiss":0,"location":0,"context":[7.201106,0.72500795],"locationHits":0,"locationRef":{"7.201106":{"line":0,"count":0,"position":[0]},"0.72500795":{"line":0,"count":0,"position":[0]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>salary------values..............true.............[1, 2]-------------------------------1
+{"tag":{"weight":8.62724,"hitMiss":1,"location":1,"context":[7.201106,0.72500795],"locationHits":0,"locationRef":{"7.201106":{"line":0,"count":0,"position":[2,2,2,2,2,2]},"0.72500795":{"line":0,"count":0,"position":[1]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>tender------values..............true.............[0, 5]-------------------------------5
+{"tag":{"weight":9.908478,"hitMiss":19,"location":19,"context":[7.201106,0.72500795],"locationHits":0,"locationRef":{"7.201106":{"line":0,"count":0,"position":[5]},"0.72500795":{"line":0,"count":0,"position":[0,5,18,19]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>Stroke - Symptoms and causes - Mayo Clinic------values..............true.............[9, 29, 53]-------------------------------15
+{"tag":{"weight":22.575172,"hitMiss":53,"location":53,"context":[7.201106,0.72500795,7.2856207],"locationHits":0,"locationRef":{"7.201106":{"line":0,"count":0,"position":[53]},"0.72500795":{"line":0,"count":0,"position":[29,53]},"7.2856207":{"line":0,"count":0,"position":[9,70,89,89,89,95,96,98,126]}}},"counter":3,"closestNeigbhour":0}
+
+
+=================>income------values..............true.............[2, 2]-------------------------------0
+{"tag":{"weight":4.960067,"hitMiss":2,"location":2,"context":[7.201106,0.72500795],"locationHits":0,"locationRef":{"7.201106":{"line":0,"count":0,"position":[2,2]},"0.72500795":{"line":0,"count":0,"position":[2]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>compliment------values..............true.............[0, 1]-------------------------------1
+{"tag":{"weight":1.9802161,"hitMiss":0,"location":0,"context":[7.201106,0.72500795],"locationHits":0,"locationRef":{"7.201106":{"line":0,"count":0,"position":[1]},"0.72500795":{"line":0,"count":0,"position":[0]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================> Republic of Sakha (Yakutia)------values..............true.............[2, 3]-------------------------------1
+{"tag":{"weight":22.325193,"hitMiss":3,"location":3,"context":[7.201106,7.2856207],"locationHits":0,"locationRef":{"7.201106":{"line":0,"count":0,"position":[3]},"7.2856207":{"line":0,"count":0,"position":[2,5,68,193,207]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>notice------values..............true.............[4, 5]-------------------------------1
+{"tag":{"weight":6.692416,"hitMiss":7,"location":7,"context":[7.201106,0.72500795],"locationHits":0,"locationRef":{"7.201106":{"line":0,"count":0,"position":[5]},"0.72500795":{"line":0,"count":0,"position":[4,5,5,6,7,7]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>The Decline and Fall of Elon Musk - The Atlantic------values..............true.............[26, 38]-------------------------------12
+{"tag":{"weight":22.590418,"hitMiss":146,"location":146,"context":[0.72500795,7.2856207],"locationHits":0,"locationRef":{"0.72500795":{"line":0,"count":0,"position":[26,146]},"7.2856207":{"line":0,"count":0,"position":[38,59,72,81,81,110,122,126]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>protector------values..............true.............[1, 2]-------------------------------1
+{"tag":{"weight":7.9072638,"hitMiss":1,"location":1,"context":[0.72500795,7.2856207],"locationHits":0,"locationRef":{"0.72500795":{"line":0,"count":0,"position":[1]},"7.2856207":{"line":0,"count":0,"position":[2]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>The Physics of Quantum Mechanics------values..............true.............[1511, 5306, 9439]-------------------------------2622
+{"tag":{"weight":22.02003,"hitMiss":1511,"location":1511,"context":[7.201106,0.72500795,7.2856207],"locationHits":0,"locationRef":{"7.201106":{"line":0,"count":0,"position":[5306]},"0.72500795":{"line":0,"count":0,"position":[1511]},"7.2856207":{"line":0,"count":0,"position":[9439,9851]}}},"counter":3,"closestNeigbhour":0}
+
+
+=================>How to Be Successful in Reaching Your Goals
+------values..............true.............[1, 13, 13]--------------------------------1
+{"tag":{"weight":21.91865,"hitMiss":69,"location":69,"context":[7.201106,0.72500795,7.2856207],"locationHits":0,"locationRef":{"7.201106":{"line":0,"count":0,"position":[13,64,69]},"0.72500795":{"line":0,"count":0,"position":[13,15,35,69]},"7.2856207":{"line":0,"count":0,"position":[1,2,3,4,5,7,9,11,17,20,30,32,32,37,39,44,48,50,50,54,62,62,65,68]}}},"counter":3,"closestNeigbhour":0}
+
+
+=================>fund------values..............true.............[3, 5]-------------------------------2
+{"tag":{"weight":4.0146847,"hitMiss":7,"location":7,"context":[7.201106,0.72500795],"locationHits":0,"locationRef":{"7.201106":{"line":0,"count":0,"position":[3]},"0.72500795":{"line":0,"count":0,"position":[5,7]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>Old Trafford abuzz as Manchester United’s neighbours welcome new stadium plans------values..............true.............[26, 26]-------------------------------0
+{"tag":{"weight":21.926506,"hitMiss":26,"location":26,"context":[7.201106,7.2856207],"locationHits":0,"locationRef":{"7.201106":{"line":0,"count":0,"position":[26]},"7.2856207":{"line":0,"count":0,"position":[26,28,30]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>statistics------values..............true.............[0, 1]-------------------------------1
+{"tag":{"weight":9.490711,"hitMiss":1,"location":1,"context":[0.72500795,7.2856207],"locationHits":0,"locationRef":{"0.72500795":{"line":0,"count":0,"position":[1]},"7.2856207":{"line":0,"count":0,"position":[0,1]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>Post-Covid home working has failed to level up UK economy, study finds | Working from home | The Guardian------values..............true.............[23, 38]-------------------------------15
+{"tag":{"weight":22.567017,"hitMiss":23,"location":23,"context":[7.201106,7.2856207],"locationHits":0,"locationRef":{"7.201106":{"line":0,"count":0,"position":[23]},"7.2856207":{"line":0,"count":0,"position":[38]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>hire------values..............true.............[1, 4]-------------------------------3
+{"tag":{"weight":4.63783,"hitMiss":4,"location":4,"context":[7.201106,0.72500795],"locationHits":0,"locationRef":{"7.201106":{"line":0,"count":0,"position":[1]},"0.72500795":{"line":0,"count":0,"position":[4]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>pass------values..............true.............[3, 18]-------------------------------15
+{"tag":{"weight":7.1359177,"hitMiss":19,"location":19,"context":[7.201106,0.72500795],"locationHits":0,"locationRef":{"7.201106":{"line":0,"count":0,"position":[18]},"0.72500795":{"line":0,"count":0,"position":[3,11,11,19]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>give------values..............true.............[1, 6]-------------------------------5
+{"tag":{"weight":4.177105,"hitMiss":1,"location":1,"context":[7.201106,7.2856207],"locationHits":0,"locationRef":{"7.201106":{"line":0,"count":0,"position":[1]},"7.2856207":{"line":0,"count":0,"position":[6]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>A father’s fight to find out what happened to his son who joined ISIS | ISIL/ISIS News | Al Jazeera------values..............true.............[46, 70]-------------------------------24
+{"tag":{"weight":22.583918,"hitMiss":70,"location":70,"context":[7.201106,7.2856207],"locationHits":0,"locationRef":{"7.201106":{"line":0,"count":0,"position":[70]},"7.2856207":{"line":0,"count":0,"position":[46,112,198,292]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>capital------values..............true.............[7, 7]-------------------------------0
+{"tag":{"weight":1.472832,"hitMiss":7,"location":7,"context":[7.201106,0.72500795],"locationHits":0,"locationRef":{"7.201106":{"line":0,"count":0,"position":[7]},"0.72500795":{"line":0,"count":0,"position":[7]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>Do you have a gut feeling that something is amiss in your marriage? If you do, pay close attention to your spouse’s actions and consider looking for proof of an affair.------values..............true.............[0, 0, 10]-------------------------------10
+{"tag":{"weight":22.349182,"hitMiss":19,"location":19,"context":[7.201106,0.72500795,7.2856207],"locationHits":0,"locationRef":{"7.201106":{"line":0,"count":0,"position":[0,19]},"0.72500795":{"line":0,"count":0,"position":[0,6,19]},"7.2856207":{"line":0,"count":0,"position":[10,33,35]}}},"counter":3,"closestNeigbhour":0}
+
+
+=================>TGB 2.0: A Benchmark for Learning on Temporal
+Knowledge Graphs and Heterogeneous Graphs------values..............true.............[614, 1020]-------------------------------406
+{"tag":{"weight":22.11478,"hitMiss":614,"location":614,"context":[0.72500795,7.2856207],"locationHits":0,"locationRef":{"0.72500795":{"line":0,"count":0,"position":[614]},"7.2856207":{"line":0,"count":0,"position":[1020]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>revenue------values..............true.............[0, 0]-------------------------------0
+{"tag":{"weight":8.41305,"hitMiss":0,"location":0,"context":[7.201106,0.72500795],"locationHits":0,"locationRef":{"7.201106":{"line":0,"count":0,"position":[0]},"0.72500795":{"line":0,"count":0,"position":[0]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>The UK’s gamble on solar geoengineering is like using aspirin for cancer
+Raymond Pierrehumbert and Michael Mann------values..............true.............[0, 8]-------------------------------8
+{"tag":{"weight":21.927372,"hitMiss":0,"location":0,"context":[0.72500795,7.2856207],"locationHits":0,"locationRef":{"0.72500795":{"line":0,"count":0,"position":[0]},"7.2856207":{"line":0,"count":0,"position":[8]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>inattention------values..............true.............[0, 0]-------------------------------0
+{"tag":{"weight":4.9954147,"hitMiss":0,"location":0,"context":[7.201106,0.72500795],"locationHits":0,"locationRef":{"7.201106":{"line":0,"count":0,"position":[0]},"0.72500795":{"line":0,"count":0,"position":[0,0]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>regard------values..............true.............[2, 2]-------------------------------0
+{"tag":{"weight":8.319323,"hitMiss":14,"location":14,"context":[7.201106,0.72500795],"locationHits":0,"locationRef":{"7.201106":{"line":0,"count":0,"position":[2,5]},"0.72500795":{"line":0,"count":0,"position":[2,2,5,6,8,10,10,10,10,13,13,14]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>neglect------values..............true.............[0, 0]-------------------------------0
+{"tag":{"weight":6.5170784,"hitMiss":3,"location":3,"context":[7.201106,0.72500795],"locationHits":0,"locationRef":{"7.201106":{"line":0,"count":0,"position":[0]},"0.72500795":{"line":0,"count":0,"position":[0,0,1,1,2,2,3]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>Google Paid $2.7 Billion to Bring Back an AI Genius Who Quit in Frustration
+------values..............true.............[1, 2]-------------------------------1
+{"tag":{"weight":22.358261,"hitMiss":14,"location":14,"context":[7.201106,7.2856207],"locationHits":0,"locationRef":{"7.201106":{"line":0,"count":0,"position":[2,14]},"7.2856207":{"line":0,"count":0,"position":[1,5,11,14,15]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>pool------values..............true.............[8, 9]-------------------------------1
+{"tag":{"weight":7.6519175,"hitMiss":9,"location":9,"context":[0.72500795,7.2856207],"locationHits":0,"locationRef":{"0.72500795":{"line":0,"count":0,"position":[9]},"7.2856207":{"line":0,"count":0,"position":[8]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>delegate------values..............true.............[1, 5]-------------------------------4
+{"tag":{"weight":2.520285,"hitMiss":5,"location":5,"context":[0.72500795,7.2856207],"locationHits":0,"locationRef":{"0.72500795":{"line":0,"count":0,"position":[5]},"7.2856207":{"line":0,"count":0,"position":[1]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>serve------values..............true.............[10, 12]-------------------------------2
+{"tag":{"weight":8.894002,"hitMiss":10,"location":10,"context":[7.201106,0.72500795],"locationHits":0,"locationRef":{"7.201106":{"line":0,"count":0,"position":[12]},"0.72500795":{"line":0,"count":0,"position":[10]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>Trump-Ramaphosa meeting: The South African road incorrectly identified as a 'burial site' by US president - BBC News------values..............true.............[6, 30]-------------------------------24
+{"tag":{"weight":22.592447,"hitMiss":30,"location":30,"context":[0.72500795,7.2856207],"locationHits":0,"locationRef":{"0.72500795":{"line":0,"count":0,"position":[30]},"7.2856207":{"line":0,"count":0,"position":[6,8,36,62,65,69]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>honor------values..............true.............[0, 13]-------------------------------13
+{"tag":{"weight":4.6559544,"hitMiss":12,"location":12,"context":[7.201106,0.72500795],"locationHits":0,"locationRef":{"7.201106":{"line":0,"count":0,"position":[13]},"0.72500795":{"line":0,"count":0,"position":[0,1,3,5,12]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>What Happens When You Have Exercise-induced Urticaria?
+Written By Dr. Anusia ThouraniDecember 23, 2022
+Updated on December 23, 2022------values..............true.............[9, 46, 46]--------------------------------9
+{"tag":{"weight":22.373518,"hitMiss":46,"location":46,"context":[7.201106,0.72500795,7.2856207],"locationHits":0,"locationRef":{"7.201106":{"line":0,"count":0,"position":[46]},"0.72500795":{"line":0,"count":0,"position":[46,46]},"7.2856207":{"line":0,"count":0,"position":[9,16,31,45]}}},"counter":3,"closestNeigbhour":0}
+
+
+=================>Google paid $2.7B to rehire AI genius who left after company refused to release his bot: report
+------values..............true.............[17, 23]-------------------------------6
+{"tag":{"weight":22.357872,"hitMiss":24,"location":24,"context":[7.201106,7.2856207],"locationHits":0,"locationRef":{"7.201106":{"line":0,"count":0,"position":[23,24]},"7.2856207":{"line":0,"count":0,"position":[17]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>Don’t you get it, Harry? You’re not a victim. You’re a rich man who can pay for his own sodding security | Marina Hyde | The Guardian------values..............true.............[1, 20]-------------------------------19
+{"tag":{"weight":22.443756,"hitMiss":38,"location":38,"context":[7.201106,7.2856207],"locationHits":0,"locationRef":{"7.201106":{"line":0,"count":0,"position":[1,8,38]},"7.2856207":{"line":0,"count":0,"position":[20,23,27]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>Becoming a Professional Chef: Tips and Advice for Success
+------values..............true.............[14, 34]-------------------------------20
+{"tag":{"weight":21.912207,"hitMiss":52,"location":52,"context":[0.72500795,7.2856207],"locationHits":0,"locationRef":{"0.72500795":{"line":0,"count":0,"position":[14,52]},"7.2856207":{"line":0,"count":0,"position":[34,58]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>Article: Google Paid $2.7 Billion to Bring Back an AI Genius Who Quit in Frustration
+------values..............true.............[2, 3]-------------------------------1
+{"tag":{"weight":22.357454,"hitMiss":3,"location":3,"context":[7.201106,7.2856207],"locationHits":0,"locationRef":{"7.201106":{"line":0,"count":0,"position":[3]},"7.2856207":{"line":0,"count":0,"position":[2,4,7]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>JUST MINE --- ‘Spiral of silence’: climate action is very popular, so why don’t people realise it?
+------values..............true.............[1, 20]-------------------------------19
+{"tag":{"weight":22.36547,"hitMiss":22,"location":22,"context":[7.201106,7.2856207],"locationHits":0,"locationRef":{"7.201106":{"line":0,"count":0,"position":[20,22]},"7.2856207":{"line":0,"count":0,"position":[1,2,2,5,7,9,9,10,10,12,12,15,15,15,16,16,17,18,19,19,20,20,21,27,29,30,31,31,32,33,33,36,41,46,46,47]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>congress------values..............true.............[4, 5]-------------------------------1
+{"tag":{"weight":2.0584593,"hitMiss":4,"location":4,"context":[0.72500795,7.2856207],"locationHits":0,"locationRef":{"0.72500795":{"line":0,"count":0,"position":[4]},"7.2856207":{"line":0,"count":0,"position":[5]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>settle------values..............true.............[12, 13]-------------------------------1
+{"tag":{"weight":8.925545,"hitMiss":12,"location":12,"context":[7.201106,7.2856207],"locationHits":0,"locationRef":{"7.201106":{"line":0,"count":0,"position":[12]},"7.2856207":{"line":0,"count":0,"position":[13]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>What is AI, and how do programmes like ChatGPT and DeepSeek work?
+------values..............true.............[6, 23]-------------------------------17
+{"tag":{"weight":21.913834,"hitMiss":23,"location":23,"context":[7.201106,7.2856207],"locationHits":0,"locationRef":{"7.201106":{"line":0,"count":0,"position":[23]},"7.2856207":{"line":0,"count":0,"position":[6,13]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>Google Paid $2.7 Billion to Bring Back an AI Genius Who Quit in Frustration
+------values..............true.............[1, 2]-------------------------------1
+{"tag":{"weight":22.359304,"hitMiss":14,"location":14,"context":[7.201106,7.2856207],"locationHits":0,"locationRef":{"7.201106":{"line":0,"count":0,"position":[2,14]},"7.2856207":{"line":0,"count":0,"position":[1,5,11,14,15]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>Robert Francis Prevost becomes Pope Leo XIV as cardinals elect first US pontiff | The papacy | The Guardian------values..............true.............[13, 61]-------------------------------48
+{"tag":{"weight":22.45275,"hitMiss":61,"location":61,"context":[0.72500795,7.2856207],"locationHits":0,"locationRef":{"0.72500795":{"line":0,"count":0,"position":[61]},"7.2856207":{"line":0,"count":0,"position":[13,40,48]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>Google Paid $2.7 Billion to Bring Back an AI Genius Who Quit in Frustration
+------values..............true.............[1, 2]-------------------------------1
+{"tag":{"weight":22.358889,"hitMiss":14,"location":14,"context":[7.201106,7.2856207],"locationHits":0,"locationRef":{"7.201106":{"line":0,"count":0,"position":[2,14]},"7.2856207":{"line":0,"count":0,"position":[1,5,11,14,15]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>dress------values..............true.............[8, 11]-------------------------------3
+{"tag":{"weight":2.9843082,"hitMiss":11,"location":11,"context":[7.201106,0.72500795],"locationHits":0,"locationRef":{"7.201106":{"line":0,"count":0,"position":[8]},"0.72500795":{"line":0,"count":0,"position":[11]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>Google Paid $2.7 Billion to Bring Back an AI Genius Who Quit in Frustration
+------values..............true.............[1, 2]-------------------------------1
+{"tag":{"weight":22.359097,"hitMiss":14,"location":14,"context":[7.201106,7.2856207],"locationHits":0,"locationRef":{"7.201106":{"line":0,"count":0,"position":[2,14]},"7.2856207":{"line":0,"count":0,"position":[1,5,11,14,15]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>retire------values..............true.............[1, 3]-------------------------------2
+{"tag":{"weight":8.382809,"hitMiss":3,"location":3,"context":[7.201106,0.72500795],"locationHits":0,"locationRef":{"7.201106":{"line":0,"count":0,"position":[1]},"0.72500795":{"line":0,"count":0,"position":[3]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>pay------values..............true.............[5, 5]-------------------------------0
+{"tag":{"weight":7.201106,"hitMiss":5,"location":5,"context":[7.201106,0.72500795],"locationHits":0,"locationRef":{"7.201106":{"line":0,"count":0,"position":[5,5,7,7,9,9,9]},"0.72500795":{"line":0,"count":0,"position":[5]}}},"counter":2,"closestNeigbhour":0}
+
+
+
+    //what can I do to become successful //
+    //what is the reality of life
+    //what can you say about love
+        //what do you think about engineering career
+    //what makes you feel love is not real
+    
+    sad--------------8.604409
+truth--------------10.371005
+communication--------------1.9285076
+work--------------11.007769
+BEFORE DILUTION=====================>{90=[8.604409], 115=[1.9285076], 554=[10.371005], 1984=[11.007769]}
+***AFTER*** DILUTION=====================>[8.604409, 1.9285076, 11.007769, 10.371005]
+
+
+=================>potential------values..............true.............[1, 3]-------------------------------2
+{"tag":{"weight":7.6661367,"hitMiss":4,"location":4,"context":[11.007769,10.371005],"locationHits":0,"locationRef":{"10.371005":{"line":0,"count":0,"position":[1]},"11.007769":{"line":0,"count":0,"position":[3,3,3,4]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>faith------values..............true.............[0, 3]-------------------------------3
+{"tag":{"weight":3.6191561,"hitMiss":3,"location":3,"context":[11.007769,10.371005],"locationHits":0,"locationRef":{"10.371005":{"line":0,"count":0,"position":[0,1,1,3,7,8]},"11.007769":{"line":0,"count":0,"position":[3]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>Moscow and Kyiv trade accusations as Russia holds Victory Day spectacle | Russia-Ukraine war News | Al Jazeera------values..............true.............[59, 65]-------------------------------6
+{"tag":{"weight":22.461887,"hitMiss":65,"location":65,"context":[11.007769,10.371005],"locationHits":0,"locationRef":{"10.371005":{"line":0,"count":0,"position":[59]},"11.007769":{"line":0,"count":0,"position":[65]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>Zelenskyy hopes for truce, says he’ll meet Putin ‘personally’ in Turkiye | Russia-Ukraine war News | Al Jazeera------values..............true.............[16, 55]-------------------------------39
+{"tag":{"weight":22.532177,"hitMiss":55,"location":55,"context":[11.007769,10.371005],"locationHits":0,"locationRef":{"10.371005":{"line":0,"count":0,"position":[16]},"11.007769":{"line":0,"count":0,"position":[55]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>piece------values..............true.............[1, 6]-------------------------------5
+{"tag":{"weight":7.486393,"hitMiss":1,"location":1,"context":[11.007769,10.371005],"locationHits":0,"locationRef":{"10.371005":{"line":0,"count":0,"position":[6]},"11.007769":{"line":0,"count":0,"position":[1]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>aver------values..............true.............[0, 2]-------------------------------2
+{"tag":{"weight":0.6354931,"hitMiss":1,"location":1,"context":[11.007769,10.371005],"locationHits":0,"locationRef":{"10.371005":{"line":0,"count":0,"position":[2,4]},"11.007769":{"line":0,"count":0,"position":[0,1]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>How ZGC allocates memory for the Java heap
+------values..............true.............[74, 81]-------------------------------7
+{"tag":{"weight":22.35972,"hitMiss":93,"location":93,"context":[11.007769,10.371005],"locationHits":0,"locationRef":{"10.371005":{"line":0,"count":0,"position":[74]},"11.007769":{"line":0,"count":0,"position":[81,81,93]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>Distributed transaction patterns for microservices compared
+------values..............true.............[2, 105]-------------------------------103
+{"tag":{"weight":21.937836,"hitMiss":147,"location":147,"context":[1.9285076,11.007769],"locationHits":0,"locationRef":{"1.9285076":{"line":0,"count":0,"position":[105]},"11.007769":{"line":0,"count":0,"position":[2,13,15,87,89,147]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>AI 2027------values..............true.............[113, 286]-------------------------------173
+{"tag":{"weight":22.594204,"hitMiss":718,"location":718,"context":[11.007769,10.371005],"locationHits":0,"locationRef":{"10.371005":{"line":0,"count":0,"position":[286]},"11.007769":{"line":0,"count":0,"position":[113,123,124,218,270,287,299,317,359,370,371,410,425,462,468,664,718]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>strive------values..............true.............[0, 1]-------------------------------1
+{"tag":{"weight":9.605667,"hitMiss":0,"location":0,"context":[11.007769,10.371005],"locationHits":0,"locationRef":{"10.371005":{"line":0,"count":0,"position":[1]},"11.007769":{"line":0,"count":0,"position":[0]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>power------values..............true.............[2, 8]-------------------------------6
+{"tag":{"weight":7.693674,"hitMiss":8,"location":8,"context":[11.007769,10.371005],"locationHits":0,"locationRef":{"10.371005":{"line":0,"count":0,"position":[2]},"11.007769":{"line":0,"count":0,"position":[8]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>Amazon CEO Andy Jassy explains 8 things you may not know about the company’s Leadership Principles------values..............true.............[11, 24]-------------------------------13
+{"tag":{"weight":22.337637,"hitMiss":11,"location":11,"context":[11.007769,10.371005],"locationHits":0,"locationRef":{"10.371005":{"line":0,"count":0,"position":[24]},"11.007769":{"line":0,"count":0,"position":[11]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>Neurosurgeon | Health Careers------values..............true.............[2, 9]-------------------------------7
+{"tag":{"weight":22.633821,"hitMiss":20,"location":20,"context":[1.9285076,11.007769],"locationHits":0,"locationRef":{"1.9285076":{"line":0,"count":0,"position":[9]},"11.007769":{"line":0,"count":0,"position":[2,2,9,11,18,20]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>What Is PGP? Pretty Good Privacy Definition
+------values..............true.............[2, 30]-------------------------------28
+{"tag":{"weight":21.97778,"hitMiss":30,"location":30,"context":[1.9285076,11.007769],"locationHits":0,"locationRef":{"1.9285076":{"line":0,"count":0,"position":[2,30,39]},"11.007769":{"line":0,"count":0,"position":[30]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>THE ART OF COMPUTER PROGRAMMING (THIRD EDITION)------values..............true.............[54, 1068, 1207, 16670]-------------------------------14341
+{"tag":{"weight":22.133965,"hitMiss":24181,"location":24181,"context":[8.604409,1.9285076,11.007769,10.371005],"locationHits":0,"locationRef":{"8.604409":{"line":0,"count":0,"position":[16670]},"1.9285076":{"line":0,"count":0,"position":[1207,25341]},"11.007769":{"line":0,"count":0,"position":[54,310,325,373,409,429,446,466,473,657,691,696,1115,1268,1497,1512,1518,1556,1936,2437,2449,2470,2717,2879,3023,3694,3709,4018,4027,4582,5554,5767,6189,6225,6267,7338,8088,9079,9250,9588,9734,10063,10129,10656,10719,10793,11127,11362,11363,13047,13050,13155,13157,13168,14421,14531,15546,16078,16088,16097,16211,16596,16748,17003,18034,18081,18240,18268,19203,20055,20708,21845,22898,24181]},"10.371005":{"line":0,"count":0,"position":[1068,1069,10994]}}},"counter":4,"closestNeigbhour":0}
+
+
+=================>Temporal Graph Benchmark
+for Machine Learning on Temporal Graphs------values..............true.............[135, 264]-------------------------------129
+{"tag":{"weight":22.10434,"hitMiss":619,"location":619,"context":[11.007769,10.371005],"locationHits":0,"locationRef":{"10.371005":{"line":0,"count":0,"position":[264]},"11.007769":{"line":0,"count":0,"position":[135,619]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>Artificial intelligence - Wikipedia------values..............true.............[64, 694]-------------------------------630
+{"tag":{"weight":22.479244,"hitMiss":2154,"location":2154,"context":[11.007769,10.371005],"locationHits":0,"locationRef":{"10.371005":{"line":0,"count":0,"position":[694,1962]},"11.007769":{"line":0,"count":0,"position":[64,330,592,706,767,1441,2010,2011,2154]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>‘One day I overheard my boss saying: just put it in ChatGPT’: the workers who lost their jobs to AI | Artificial intelligence (AI) | The Guardian------values..............true.............[3, 76]-------------------------------73
+{"tag":{"weight":22.627178,"hitMiss":121,"location":121,"context":[8.604409,11.007769],"locationHits":0,"locationRef":{"8.604409":{"line":0,"count":0,"position":[76]},"11.007769":{"line":0,"count":0,"position":[3,32,38,44,48,61,75,104,112,116,121]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>Quantum mechanics
+------values..............true.............[12, 220]-------------------------------208
+{"tag":{"weight":22.002075,"hitMiss":229,"location":229,"context":[1.9285076,11.007769],"locationHits":0,"locationRef":{"1.9285076":{"line":0,"count":0,"position":[12]},"11.007769":{"line":0,"count":0,"position":[220,229,229]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>PERSONAL+PRIVATE===>How ZGC allocates memory for the Java heap
+------values..............true.............[74, 81]-------------------------------7
+{"tag":{"weight":22.361464,"hitMiss":93,"location":93,"context":[11.007769,10.371005],"locationHits":0,"locationRef":{"10.371005":{"line":0,"count":0,"position":[74]},"11.007769":{"line":0,"count":0,"position":[81,81,93]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>Want People to Pay Attention? Lead With Impact. - Chris Fenning------values..............true.............[0, 0, 0, 10]-------------------------------10
+{"tag":{"weight":22.636696,"hitMiss":17,"location":17,"context":[8.604409,1.9285076,11.007769,10.371005],"locationHits":0,"locationRef":{"8.604409":{"line":0,"count":0,"position":[0]},"1.9285076":{"line":0,"count":0,"position":[0,0,10,16,16,16,17]},"11.007769":{"line":0,"count":0,"position":[10,16,17]},"10.371005":{"line":0,"count":0,"position":[0]}}},"counter":4,"closestNeigbhour":0}
+
+
+=================>‘Spiral of silence’: climate action is very popular, so why don’t people realise it?
+------values..............true.............[9, 39, 53]-------------------------------5
+{"tag":{"weight":22.363274,"hitMiss":51,"location":51,"context":[1.9285076,11.007769,10.371005],"locationHits":0,"locationRef":{"1.9285076":{"line":0,"count":0,"position":[9,21]},"10.371005":{"line":0,"count":0,"position":[53]},"11.007769":{"line":0,"count":0,"position":[39,51]}}},"counter":3,"closestNeigbhour":0}
+
+
+=================>communication------values..............true.............[0, 0]-------------------------------0
+{"tag":{"weight":1.9285076,"hitMiss":0,"location":0,"context":[1.9285076,10.371005],"locationHits":0,"locationRef":{"1.9285076":{"line":0,"count":0,"position":[0,0]},"10.371005":{"line":0,"count":0,"position":[0]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>What did India and Pakistan gain – and lose – in their military standoff? | India-Pakistan Tensions News | Al Jazeera------values..............true.............[46, 50]-------------------------------4
+{"tag":{"weight":22.55002,"hitMiss":46,"location":46,"context":[11.007769,10.371005],"locationHits":0,"locationRef":{"10.371005":{"line":0,"count":0,"position":[50]},"11.007769":{"line":0,"count":0,"position":[46]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>organic------values..............true.............[2, 3]-------------------------------1
+{"tag":{"weight":6.852433,"hitMiss":2,"location":2,"context":[11.007769,10.371005],"locationHits":0,"locationRef":{"10.371005":{"line":0,"count":0,"position":[3]},"11.007769":{"line":0,"count":0,"position":[2]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>show------values..............true.............[3, 12]-------------------------------9
+{"tag":{"weight":9.049112,"hitMiss":12,"location":12,"context":[11.007769,10.371005],"locationHits":0,"locationRef":{"10.371005":{"line":0,"count":0,"position":[3]},"11.007769":{"line":0,"count":0,"position":[12]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>The Physics of Quantum Mechanics------values..............true.............[271, 505]-------------------------------234
+{"tag":{"weight":22.02003,"hitMiss":13753,"location":13753,"context":[11.007769,10.371005],"locationHits":0,"locationRef":{"10.371005":{"line":0,"count":0,"position":[505,3253,5937]},"11.007769":{"line":0,"count":0,"position":[271,920,1233,1442,2202,2281,2803,3361,3969,4198,4677,4752,4895,5139,5323,5327,5393,5437,5807,6002,6013,6492,6691,6833,8212,9069,9272,9795,10711,10725,10803,11391,11430,11478,11487,11494,11613,11647,12028,12502,12533,13099,13400,13487,13612,13753]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>science------values..............true.............[0, 1]-------------------------------1
+{"tag":{"weight":8.724672,"hitMiss":1,"location":1,"context":[11.007769,10.371005],"locationHits":0,"locationRef":{"10.371005":{"line":0,"count":0,"position":[0,1]},"11.007769":{"line":0,"count":0,"position":[1]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>Avoid Meeting Failures With One Small Change to the Invitation - Chris Fenning------values..............true.............[1, 24]-------------------------------23
+{"tag":{"weight":22.637142,"hitMiss":31,"location":31,"context":[11.007769,10.371005],"locationHits":0,"locationRef":{"10.371005":{"line":0,"count":0,"position":[1]},"11.007769":{"line":0,"count":0,"position":[24,31]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>entropy------values..............true.............[0, 0]-------------------------------0
+{"tag":{"weight":3.3492334,"hitMiss":0,"location":0,"context":[1.9285076,11.007769],"locationHits":0,"locationRef":{"1.9285076":{"line":0,"count":0,"position":[0]},"11.007769":{"line":0,"count":0,"position":[0]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>Virtual Panel: Using Java in Low Latency Environments - InfoQ------values..............true.............[1, 105]-------------------------------104
+{"tag":{"weight":22.402445,"hitMiss":171,"location":171,"context":[11.007769,10.371005],"locationHits":0,"locationRef":{"10.371005":{"line":0,"count":0,"position":[105]},"11.007769":{"line":0,"count":0,"position":[1,131,131,150,152,160,169,171]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>rest------values..............true.............[1, 20]-------------------------------19
+{"tag":{"weight":8.404438,"hitMiss":11,"location":11,"context":[11.007769,10.371005],"locationHits":0,"locationRef":{"10.371005":{"line":0,"count":0,"position":[20]},"11.007769":{"line":0,"count":0,"position":[1,4,11]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>experiment------values..............true.............[0, 2]-------------------------------2
+{"tag":{"weight":3.5504267,"hitMiss":2,"location":2,"context":[11.007769,10.371005],"locationHits":0,"locationRef":{"10.371005":{"line":0,"count":0,"position":[0]},"11.007769":{"line":0,"count":0,"position":[2]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>A father’s fight to find out what happened to his son who joined ISIS | ISIL/ISIS News | Al Jazeera------values..............true.............[53, 150]-------------------------------97
+{"tag":{"weight":22.583918,"hitMiss":53,"location":53,"context":[8.604409,11.007769],"locationHits":0,"locationRef":{"8.604409":{"line":0,"count":0,"position":[150,188]},"11.007769":{"line":0,"count":0,"position":[53]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>traverse------values..............true.............[5, 6, 7]--------------------------------4
+{"tag":{"weight":10.252845,"hitMiss":6,"location":6,"context":[1.9285076,11.007769,10.371005],"locationHits":0,"locationRef":{"1.9285076":{"line":0,"count":0,"position":[5]},"10.371005":{"line":0,"count":0,"position":[7]},"11.007769":{"line":0,"count":0,"position":[6,6]}}},"counter":3,"closestNeigbhour":0}
+
+
+=================>Do you have a gut feeling that something is amiss in your marriage? If you do, pay close attention to your spouse’s actions and consider looking for proof of an affair.------values..............true.............[8, 10]-------------------------------2
+{"tag":{"weight":22.349182,"hitMiss":28,"location":28,"context":[1.9285076,11.007769],"locationHits":0,"locationRef":{"1.9285076":{"line":0,"count":0,"position":[8,30]},"11.007769":{"line":0,"count":0,"position":[10,28]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>TGB 2.0: A Benchmark for Learning on Temporal
+Knowledge Graphs and Heterogeneous Graphs------values..............true.............[119, 943]-------------------------------824
+{"tag":{"weight":22.11478,"hitMiss":1004,"location":1004,"context":[11.007769,10.371005],"locationHits":0,"locationRef":{"10.371005":{"line":0,"count":0,"position":[943,946]},"11.007769":{"line":0,"count":0,"position":[119,390,637,1004]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>Pregel: A System for Large-Scale Graph Processing------values..............true.............[17, 76]-------------------------------59
+{"tag":{"weight":22.567898,"hitMiss":754,"location":754,"context":[1.9285076,11.007769],"locationHits":0,"locationRef":{"1.9285076":{"line":0,"count":0,"position":[76,148,346,700,779,782,785]},"11.007769":{"line":0,"count":0,"position":[17,32,91,117,310,684,754]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>so------values..............true.............[7, 7]-------------------------------0
+{"tag":{"weight":9.260699,"hitMiss":7,"location":7,"context":[11.007769,10.371005],"locationHits":0,"locationRef":{"10.371005":{"line":0,"count":0,"position":[7]},"11.007769":{"line":0,"count":0,"position":[7]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>Is It Safe to Leave Toothpaste on Your Teeth Overnight? – Boka------values..............true.............[10, 57]-------------------------------47
+{"tag":{"weight":22.614742,"hitMiss":57,"location":57,"context":[11.007769,10.371005],"locationHits":0,"locationRef":{"10.371005":{"line":0,"count":0,"position":[57]},"11.007769":{"line":0,"count":0,"position":[10,11,31,34,38,43,45,55,57]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>Three unexpected benefits of talking about technical debt - Chris Fenning------values..............true.............[0, 9]-------------------------------9
+{"tag":{"weight":22.63776,"hitMiss":13,"location":13,"context":[1.9285076,11.007769],"locationHits":0,"locationRef":{"1.9285076":{"line":0,"count":0,"position":[0,12,12,12,13]},"11.007769":{"line":0,"count":0,"position":[9,12,13]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>How ZGC allocates memory for the Java heap------values..............true.............[160, 181]-------------------------------21
+{"tag":{"weight":22.40352,"hitMiss":217,"location":217,"context":[11.007769,10.371005],"locationHits":0,"locationRef":{"10.371005":{"line":0,"count":0,"position":[160]},"11.007769":{"line":0,"count":0,"position":[181,184,217]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>Trump-Ramaphosa meeting: The South African road incorrectly identified as a 'burial site' by US president - BBC News------values..............true.............[12, 65, 68]--------------------------------9
+{"tag":{"weight":22.592447,"hitMiss":68,"location":68,"context":[8.604409,11.007769,10.371005],"locationHits":0,"locationRef":{"8.604409":{"line":0,"count":0,"position":[65]},"10.371005":{"line":0,"count":0,"position":[12]},"11.007769":{"line":0,"count":0,"position":[68]}}},"counter":3,"closestNeigbhour":0}
+
+
+=================>weak------values..............true.............[8, 15]-------------------------------7
+{"tag":{"weight":10.9486885,"hitMiss":8,"location":8,"context":[11.007769,10.371005],"locationHits":0,"locationRef":{"10.371005":{"line":0,"count":0,"position":[15]},"11.007769":{"line":0,"count":0,"position":[8]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>“I Can't Do This Anymore:” What to Do If You Are Experiencing Burnout
+------values..............true.............[10, 32]-------------------------------22
+{"tag":{"weight":21.920238,"hitMiss":44,"location":44,"context":[11.007769,10.371005],"locationHits":0,"locationRef":{"10.371005":{"line":0,"count":0,"position":[32]},"11.007769":{"line":0,"count":0,"position":[10,21,26,38,44]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>Breaking the silence
+Why do these collective illusions about the level of support for climate action exist at all? What is the root cause? ------values..............true.............[4, 6]-------------------------------2
+{"tag":{"weight":22.365679,"hitMiss":4,"location":4,"context":[11.007769,10.371005],"locationHits":0,"locationRef":{"10.371005":{"line":0,"count":0,"position":[6]},"11.007769":{"line":0,"count":0,"position":[4]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>Becoming a Professional Chef: Tips and Advice for Success
+------values..............true.............[12, 13]-------------------------------1
+{"tag":{"weight":21.912207,"hitMiss":58,"location":58,"context":[1.9285076,11.007769],"locationHits":0,"locationRef":{"1.9285076":{"line":0,"count":0,"position":[13,40,40]},"11.007769":{"line":0,"count":0,"position":[12,19,21,39,40,45,58]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>workless------values..............true.............[0, 1]-------------------------------1
+{"tag":{"weight":11.014878,"hitMiss":0,"location":0,"context":[11.007769,10.371005],"locationHits":0,"locationRef":{"10.371005":{"line":0,"count":0,"position":[1]},"11.007769":{"line":0,"count":0,"position":[0]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>JUST MINE --- ‘Spiral of silence’: climate action is very popular, so why don’t people realise it?
+------values..............true.............[4, 34, 48]-------------------------------10
+{"tag":{"weight":22.36547,"hitMiss":46,"location":46,"context":[1.9285076,11.007769,10.371005],"locationHits":0,"locationRef":{"1.9285076":{"line":0,"count":0,"position":[4,16]},"10.371005":{"line":0,"count":0,"position":[48]},"11.007769":{"line":0,"count":0,"position":[34,46]}}},"counter":3,"closestNeigbhour":0}
+
+
+=================>organ------values..............true.............[1, 3]-------------------------------2
+{"tag":{"weight":6.851432,"hitMiss":1,"location":1,"context":[1.9285076,11.007769],"locationHits":0,"locationRef":{"1.9285076":{"line":0,"count":0,"position":[3,3]},"11.007769":{"line":0,"count":0,"position":[1]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>Joe Biden diagnosed with ‘aggressive form’ of prostate cancer, his office says | Joe Biden | The Guardian------values..............true.............[16, 39]-------------------------------23
+{"tag":{"weight":22.577908,"hitMiss":39,"location":39,"context":[11.007769,10.371005],"locationHits":0,"locationRef":{"10.371005":{"line":0,"count":0,"position":[16]},"11.007769":{"line":0,"count":0,"position":[39]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>Virtual Panel: Using Java in Low Latency Environments
+------values..............true.............[47, 61]-------------------------------14
+{"tag":{"weight":22.382782,"hitMiss":84,"location":84,"context":[11.007769,10.371005],"locationHits":0,"locationRef":{"10.371005":{"line":0,"count":0,"position":[47]},"11.007769":{"line":0,"count":0,"position":[61,61,71,78,84]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>Trump administration to stop US research on space pollution, in boon to Elon Musk | Trump administration | The Guardian------values..............true.............[11, 18]-------------------------------7
+{"tag":{"weight":22.476515,"hitMiss":75,"location":75,"context":[1.9285076,11.007769],"locationHits":0,"locationRef":{"1.9285076":{"line":0,"count":0,"position":[18]},"11.007769":{"line":0,"count":0,"position":[11,75]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>Robert Francis Prevost becomes Pope Leo XIV as cardinals elect first US pontiff | The papacy | The Guardian------values..............true.............[14, 56]-------------------------------42
+{"tag":{"weight":22.45275,"hitMiss":58,"location":58,"context":[11.007769,10.371005],"locationHits":0,"locationRef":{"10.371005":{"line":0,"count":0,"position":[14]},"11.007769":{"line":0,"count":0,"position":[56,58]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>Awareness of the Benefits and Risks Related to Using Fluoridated Toothpaste Among Doctors: A Population-Based Study - PMC------values..............true.............[34, 74]-------------------------------40
+{"tag":{"weight":22.608643,"hitMiss":34,"location":34,"context":[1.9285076,11.007769],"locationHits":0,"locationRef":{"1.9285076":{"line":0,"count":0,"position":[74]},"11.007769":{"line":0,"count":0,"position":[34]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>expression------values..............true.............[0, 3]-------------------------------3
+{"tag":{"weight":3.5742023,"hitMiss":3,"location":3,"context":[11.007769,10.371005],"locationHits":0,"locationRef":{"10.371005":{"line":0,"count":0,"position":[0]},"11.007769":{"line":0,"count":0,"position":[3]}}},"counter":2,"closestNeigbhour":0}
+
+
+=================>call------values..............true.............[5, 5]-------------------------------0
+{"tag":{"weight":1.4575294,"hitMiss":5,"location":5,"context":[11.007769,10.371005],"locationHits":0,"locationRef":{"10.371005":{"line":0,"count":0,"position":[5]},"11.007769":{"line":0,"count":0,"position":[5]}}},"counter":2,"closestNeigbhour":0}
+
+
+public class TextComparison {
+  private String input;
+  private String mappedResult;
+  private double comparisonThreshold;
+  private List<Character> missingWord;
+  private ResultSummary resultSummary;
+  public Object originalSource;
+
+  public TextComparison(
+      String input,
+      String mappedResult,
+      double comparisonThreshold,
+      List<Character> missingWord,
+      ResultSummary resultSummary,
+      Object originalSource) {
+    this.input = input;
+    this.mappedResult = mappedResult;
+    this.comparisonThreshold = comparisonThreshold;
+    this.missingWord = missingWord;
+    this.resultSummary = resultSummary;
+    this.originalSource = originalSource;
+  }
+
+  public String getInput() {
+    return input;
+  }
+
+  public String getMappedResult() {
+    return mappedResult;
+  }
+
+  public double getComparisonThreshold() {
+    return comparisonThreshold;
+  }
+
+  public void setMappedResult(String mappedResult) {
+    this.mappedResult = mappedResult;
+  }
+
+  public List<Character> getMissingWord() {
+    return missingWord;
+  }
+
+  public ResultSummary getResultSummary() {
+    return resultSummary;
+  }
+
+  @Override
+  public String toString() {
+    return "TextComparison{"
+        + "input='"
+        + input
+        + '\''
+        + ", mappedResult='"
+        + mappedResult
+        + '\''
+        + ", comparisonThreshold="
+        + comparisonThreshold
+        + ", missingWord="
+        + missingWord
+        + ", resultSummary="
+        + resultSummary
+        + '}';
+  }
+}
+
+
+
+  public static TextComparison checkMatch(String input, Set<String> data) {
+    JaroWinklerSimilarity jaroWinkler = new JaroWinklerSimilarity();
+    double threshold = 0.9;
+
+    String mappedResult = null;
+    double highestSimilarity = 0.0;
+    List<Character> missingWord = new ArrayList<>();
+    ResultSummary resultSummary = ResultSummary.NO_MATCH;
+    Object originalSource = null;
+
+    if (data.contains(input)) {
+      mappedResult = input;
+      highestSimilarity = 1.0;
+      resultSummary = ResultSummary.EXACT_MATCH;
+      originalSource = input;
+    } else {
+      for (String str : data) {
+        double similarity = jaroWinkler.apply(input, str);
+        if (similarity > highestSimilarity && similarity > threshold) {
+          mappedResult = str;
+          highestSimilarity = similarity;
+          resultSummary = ResultSummary.CLOSE_MATCH;
+          missingWord = new ArrayList<>();
+          originalSource = str;
+
+          // Find missing characters
+          int i = 0, j = 0;
+          while (i < input.length() && j < str.length()) {
+            if (input.charAt(i) == str.charAt(j)) {
+              i++;
+              j++;
+            } else {
+              missingWord.add(str.charAt(j));
+              j++;
+            }
+          }
+          while (j < str.length()) {
+            missingWord.add(str.charAt(j));
+            j++;
+          }
+        }
+      }
+    }
+    if (mappedResult == null) {
+      mappedResult = input;
+    }
+    return new TextComparison(
+        input, mappedResult, highestSimilarity, missingWord, resultSummary, originalSource);
+  }
+
+  public static TextComparison checkMatch(String input, Map<String,String> map){
+    HashSet<String> hashSet = new HashSet<>();
+    for(var m : map.entrySet()){
+      hashSet.add(m.getKey());
+    }
+    return checkMatch(input, hashSet);
+  }
+  public static<T> TextComparison checkMatchWithList(String input, Map<String,List<T>> map){
+    HashSet<String> hashSet = new HashSet<>();
+    for(var m : map.entrySet()){
+      hashSet.add(m.getKey());
+    }
+    return checkMatch(input, hashSet);
+  }
+}
+
+
+https://knowledge.zhaoweiguo.com/build/html/x-learning/books/ais/2024/build_llm_from_scratch
